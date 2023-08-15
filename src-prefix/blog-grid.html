@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Grids | Solid - Tailwind CSS Saas Template</title>
+  </head>
+  <body
+    x-data="{ page: 'blog-grid', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'ud-dark ud-bg-black': darkMode === true}"
+  >
+    <!-- ===== Bg Lines Start ===== -->
+    <include src="./partials/lines.html" />
+    <!-- ===== Bg Lines End ===== -->
+
+    <!-- ===== Header Start ===== -->
+    <include src="./partials/header.html" />
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== Blog ud-grid Start ===== -->
+      <section class="ud-py-20 lg:ud-py-25 xl:ud-py-30">
+        <div class="ud-mx-auto ud-max-w-c-1280 ud-px-4 md:ud-px-8 xl:ud-px-0 ud-mt-15 xl:ud-mt-20">
+          <div class="ud-grid ud-grid-cols-1 md:ud-grid-cols-2 lg:ud-grid-cols-3 ud-gap-7.5 xl:ud-gap-10">
+            <!-- Blog Item -->
+            <div class="animate_top ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-solid-8 ud-p-4 ud-pb-9">
+              <a href="blog-single.html" class="ud-block">
+                <img src="./images/blog/blog-01.png" alt="Blog" />
+              </a>
+
+              <div class="ud-px-4">
+                <h4 class="ud-font-medium ud-text-lg xl:ud-text-itemtitle2 ud-text-black hover:ud-text-primary dark:ud-text-white ud-mt-7.5 ud-mb-3.5">
+                  <a href="blog-single.html">Free advertising for your online business</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-solid-8 ud-p-4 ud-pb-9">
+              <a href="blog-single.html" class="ud-block">
+                <img src="./images/blog/blog-02.png" alt="Blog" />
+              </a>
+
+              <div class="ud-px-4">
+                <h4 class="ud-font-medium ud-text-lg xl:ud-text-itemtitle2 ud-text-black hover:ud-text-primary dark:ud-text-white ud-mt-7.5 ud-mb-3.5">
+                  <a href="bog-single.html">9 simple ways to improve your design skills</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-solid-8 ud-p-4 ud-pb-9">
+              <a href="blog-single.html" class="ud-block">
+                <img src="./images/blog/blog-03.png" alt="Blog" />
+              </a>
+
+              <div class="ud-px-4">
+                <h4 class="ud-font-medium ud-text-lg xl:ud-text-itemtitle2 ud-text-black hover:ud-text-primary dark:ud-text-white ud-mt-7.5 ud-mb-3.5">
+                  <a href="blog-single.html">Tips to quickly improve your coding speed.</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-solid-8 ud-p-4 ud-pb-9">
+              <a href="blog-single.html" class="ud-block">
+                <img src="./images/blog/blog-01.png" alt="Blog" />
+              </a>
+
+              <div class="ud-px-4">
+                <h4 class="ud-font-medium ud-text-lg xl:ud-text-itemtitle2 ud-text-black hover:ud-text-primary dark:ud-text-white ud-mt-7.5 ud-mb-3.5">
+                  <a href="blog-single.html">Free advertising for your online business</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-solid-8 ud-p-4 ud-pb-9">
+              <a href="blog-single.html" class="ud-block">
+                <img src="./images/blog/blog-02.png" alt="Blog" />
+              </a>
+
+              <div class="ud-px-4">
+                <h4 class="ud-font-medium ud-text-lg xl:ud-text-itemtitle2 ud-text-black hover:ud-text-primary dark:ud-text-white ud-mt-7.5 ud-mb-3.5">
+                  <a href="bog-single.html">9 simple ways to improve your design skills</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-solid-8 ud-p-4 ud-pb-9">
+              <a href="blog-single.html" class="ud-block">
+                <img src="./images/blog/blog-03.png" alt="Blog" />
+              </a>
+
+              <div class="ud-px-4">
+                <h4 class="ud-font-medium ud-text-lg xl:ud-text-itemtitle2 ud-text-black hover:ud-text-primary dark:ud-text-white ud-mt-7.5 ud-mb-3.5">
+                  <a href="blog-single.html">Tips to quickly improve your coding speed.</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="ud-mt-10 lg:ud-mt-15 xl:ud-mt-20 ud-relative ud-z-1">
+            <nav>
+              <ul class="ud-flex ud-items-center ud-justify-center ud-gap-3.5">
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-[4px] ud-text-black dark:ud-text-white ud-text-xs md:ud-text-base ud-border ud-border-stroke dark:ud-border-strokedark ud-transition-all ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white"
+                    href="#"
+                  >
+                    <svg
+                      class="ud-fill-black group-hover:ud-fill-white dark:ud-fill-white ud-transition-all ud-duration-300"
+                      width="8"
+                      height="14"
+                      viewBox="0 0 8 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M2.93884 6.99999L7.88884 11.95L6.47484 13.364L0.11084 6.99999L6.47484 0.635986L7.88884 2.04999L2.93884 6.99999Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-[4px] ud-text-black dark:ud-text-white ud-text-xs md:ud-text-base ud-border ud-border-stroke dark:ud-border-strokedark ud-transition-all ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white"
+                    href="#"
+                  >
+                    2
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-[4px] ud-text-black dark:ud-text-white ud-text-xs md:ud-text-base ud-border ud-border-stroke dark:ud-border-strokedark ud-transition-all ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white"
+                    href="#"
+                  >
+                    3
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-[4px] ud-text-black dark:ud-text-white ud-text-xs md:ud-text-base ud-border ud-border-stroke dark:ud-border-strokedark ud-transition-all ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white"
+                    href="#"
+                  >
+                    4
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-[4px] ud-text-black dark:ud-text-white ud-text-xs md:ud-text-base ud-border ud-border-stroke dark:ud-border-strokedark ud-transition-all ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white"
+                    href="#"
+                  >
+                    ...
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-[4px] ud-text-black dark:ud-text-white ud-text-xs md:ud-text-base ud-border ud-border-stroke dark:ud-border-strokedark ud-transition-all ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white"
+                    href="#"
+                  >
+                    12
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="ud-group ud-flex ud-items-center ud-justify-center ud-w-7.5 md:ud-w-10 ud-h-7.5 md:ud-h-10 ud-rounded-[4px] ud-text-black dark:ud-text-white ud-text-xs md:ud-text-base ud-border ud-border-stroke dark:ud-border-strokedark ud-transition-all ud-duration-300 ud-bg-white dark:ud-bg-blacksection hover:ud-bg-primary dark:hover:ud-bg-primary hover:ud-text-white"
+                    href="#"
+                  >
+                    <svg class="ud-fill-black group-hover:ud-fill-white dark:ud-fill-white" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.06116 7.00001L0.111159 2.05001L1.52516 0.636014L7.88916 7.00001L1.52516 13.364L0.11116 11.95L5.06116 7.00001Z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Pagination -->
+        </div>
+      </section>
+      <!-- ===== Blog ud-grid End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <include src="./partials/footer.html" />
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <include src="./partials/scrolltop.html" />
+    <!-- ====== Back To Top End ===== -->
+  </body>
+</html>

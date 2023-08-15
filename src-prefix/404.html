@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta httud-p-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 | Solid - Tailwind CSS Saas Template</title>
+  </head>
+  <body
+    x-data="{ page: '404', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'ud-dark ud-bg-black': darkMode === true}"
+  >
+    <!-- ===== Bg Lines Start ===== -->
+    <include src="./partials/lines.html" />
+    <!-- ===== Bg Lines End ===== -->
+
+    <!-- ===== Header Start ===== -->
+    <include src="./partials/header.html" />
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== 404 Start ===== -->
+      <section class="ud-pt-45 lg:ud-pt-50 xl:ud-pt-55 pb-25 lg:ud-pb-32.5 xl:ud-pb-37.5 ud-overflow-hidden">
+        <div class="animate_top ud-mx-auto ud-max-w-[518px] ud-text-center">
+          <img src="./images/shape/404.svg" alt="404" class="ud-mx-auto ud-mb-7.5" />
+
+          <h2 class="ud-font-semibold ud-text-2xl md:ud-text-4xl ud-text-black dark:ud-text-white ud-mb-5">This Page Does Not Exist</h2>
+          <p class="ud-mb-7.5">The page you were looking for appears to have been moved, deleted or does not exist.</p>
+
+          <button
+            class="ud-inline-flex ud-items-center ud-gap-2.5 ud-bg-black dark:ud-bg-btndark hover:ud-bg-blackho ud-ease-in-out ud-duration-300 ud-font-medium ud-text-white ud-rounded-full ud-px-6 ud-py-3"
+          >
+            Return to Home
+            <svg class="ud-fill-white" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z" fill="" />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <!-- ===== 404 End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <include src="./partials/footer.html" />
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <include src="./partials/scrolltop.html" />
+    <!-- ====== Back To Top End ===== -->
+  </body>
+</html>

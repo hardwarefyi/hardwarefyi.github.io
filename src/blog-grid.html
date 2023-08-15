@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Grids | Solid - Tailwind CSS Saas Template</title>
+  </head>
+  <body
+    x-data="{ page: 'blog-grid', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'dark bg-black': darkMode === true}"
+  >
+    <!-- ===== Bg Lines Start ===== -->
+    <include src="./partials/lines.html" />
+    <!-- ===== Bg Lines End ===== -->
+
+    <!-- ===== Header Start ===== -->
+    <include src="./partials/header.html" />
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== Blog Grid Start ===== -->
+      <section class="py-20 lg:py-25 xl:py-30">
+        <div class="mx-auto max-w-c-1280 px-4 md:px-8 xl:px-0 mt-15 xl:mt-20">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5 xl:gap-10">
+            <!-- Blog Item -->
+            <div class="animate_top bg-white dark:bg-blacksection rounded-lg shadow-solid-8 p-4 pb-9">
+              <a href="blog-single.html" class="block">
+                <img src="./images/blog/blog-01.png" alt="Blog" />
+              </a>
+
+              <div class="px-4">
+                <h4 class="font-medium text-lg xl:text-itemtitle2 text-black hover:text-primary dark:text-white mt-7.5 mb-3.5">
+                  <a href="blog-single.html">Free advertising for your online business</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top bg-white dark:bg-blacksection rounded-lg shadow-solid-8 p-4 pb-9">
+              <a href="blog-single.html" class="block">
+                <img src="./images/blog/blog-02.png" alt="Blog" />
+              </a>
+
+              <div class="px-4">
+                <h4 class="font-medium text-lg xl:text-itemtitle2 text-black hover:text-primary dark:text-white mt-7.5 mb-3.5">
+                  <a href="bog-single.html">9 simple ways to improve your design skills</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top bg-white dark:bg-blacksection rounded-lg shadow-solid-8 p-4 pb-9">
+              <a href="blog-single.html" class="block">
+                <img src="./images/blog/blog-03.png" alt="Blog" />
+              </a>
+
+              <div class="px-4">
+                <h4 class="font-medium text-lg xl:text-itemtitle2 text-black hover:text-primary dark:text-white mt-7.5 mb-3.5">
+                  <a href="blog-single.html">Tips to quickly improve your coding speed.</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top bg-white dark:bg-blacksection rounded-lg shadow-solid-8 p-4 pb-9">
+              <a href="blog-single.html" class="block">
+                <img src="./images/blog/blog-01.png" alt="Blog" />
+              </a>
+
+              <div class="px-4">
+                <h4 class="font-medium text-lg xl:text-itemtitle2 text-black hover:text-primary dark:text-white mt-7.5 mb-3.5">
+                  <a href="blog-single.html">Free advertising for your online business</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top bg-white dark:bg-blacksection rounded-lg shadow-solid-8 p-4 pb-9">
+              <a href="blog-single.html" class="block">
+                <img src="./images/blog/blog-02.png" alt="Blog" />
+              </a>
+
+              <div class="px-4">
+                <h4 class="font-medium text-lg xl:text-itemtitle2 text-black hover:text-primary dark:text-white mt-7.5 mb-3.5">
+                  <a href="bog-single.html">9 simple ways to improve your design skills</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top bg-white dark:bg-blacksection rounded-lg shadow-solid-8 p-4 pb-9">
+              <a href="blog-single.html" class="block">
+                <img src="./images/blog/blog-03.png" alt="Blog" />
+              </a>
+
+              <div class="px-4">
+                <h4 class="font-medium text-lg xl:text-itemtitle2 text-black hover:text-primary dark:text-white mt-7.5 mb-3.5">
+                  <a href="blog-single.html">Tips to quickly improve your coding speed.</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="mt-10 lg:mt-15 xl:mt-20 relative z-1">
+            <nav>
+              <ul class="flex items-center justify-center gap-3.5">
+                <li>
+                  <a
+                    class="group flex items-center justify-center w-7.5 md:w-10 h-7.5 md:h-10 rounded-[4px] text-black dark:text-white text-xs md:text-base border border-stroke dark:border-strokedark transition-all duration-300 bg-white dark:bg-blacksection hover:bg-primary dark:hover:bg-primary hover:text-white"
+                    href="#"
+                  >
+                    <svg class="fill-black group-hover:fill-white dark:fill-white transition-all duration-300" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.93884 6.99999L7.88884 11.95L6.47484 13.364L0.11084 6.99999L6.47484 0.635986L7.88884 2.04999L2.93884 6.99999Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="group flex items-center justify-center w-7.5 md:w-10 h-7.5 md:h-10 rounded-[4px] text-black dark:text-white text-xs md:text-base border border-stroke dark:border-strokedark transition-all duration-300 bg-white dark:bg-blacksection hover:bg-primary dark:hover:bg-primary hover:text-white"
+                    href="#"
+                  >
+                    2
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="group flex items-center justify-center w-7.5 md:w-10 h-7.5 md:h-10 rounded-[4px] text-black dark:text-white text-xs md:text-base border border-stroke dark:border-strokedark transition-all duration-300 bg-white dark:bg-blacksection hover:bg-primary dark:hover:bg-primary hover:text-white"
+                    href="#"
+                  >
+                    3
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="group flex items-center justify-center w-7.5 md:w-10 h-7.5 md:h-10 rounded-[4px] text-black dark:text-white text-xs md:text-base border border-stroke dark:border-strokedark transition-all duration-300 bg-white dark:bg-blacksection hover:bg-primary dark:hover:bg-primary hover:text-white"
+                    href="#"
+                  >
+                    4
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="group flex items-center justify-center w-7.5 md:w-10 h-7.5 md:h-10 rounded-[4px] text-black dark:text-white text-xs md:text-base border border-stroke dark:border-strokedark transition-all duration-300 bg-white dark:bg-blacksection hover:bg-primary dark:hover:bg-primary hover:text-white"
+                    href="#"
+                  >
+                    ...
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="group flex items-center justify-center w-7.5 md:w-10 h-7.5 md:h-10 rounded-[4px] text-black dark:text-white text-xs md:text-base border border-stroke dark:border-strokedark transition-all duration-300 bg-white dark:bg-blacksection hover:bg-primary dark:hover:bg-primary hover:text-white"
+                    href="#"
+                  >
+                    12
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="group flex items-center justify-center w-7.5 md:w-10 h-7.5 md:h-10 rounded-[4px] text-black dark:text-white text-xs md:text-base border border-stroke dark:border-strokedark transition-all duration-300 bg-white dark:bg-blacksection hover:bg-primary dark:hover:bg-primary hover:text-white"
+                    href="#"
+                  >
+                    <svg class="fill-black group-hover:fill-white dark:fill-white" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.06116 7.00001L0.111159 2.05001L1.52516 0.636014L7.88916 7.00001L1.52516 13.364L0.11116 11.95L5.06116 7.00001Z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Pagination -->
+        </div>
+      </section>
+      <!-- ===== Blog Grid End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <include src="./partials/footer.html" />
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <include src="./partials/scrolltop.html" />
+    <!-- ====== Back To Top End ===== -->
+  </body>
+</html>

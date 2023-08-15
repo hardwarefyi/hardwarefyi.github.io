@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solid - Tailwind CSS Saas Template</title>
+  </head>
+  <body
+    x-data="{ page: 'home', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'dark bg-black': darkMode === true}"
+  >
+    <!-- ===== Bg Lines Start ===== -->
+    <include src="./partials/lines.html" />
+    <!-- ===== Bg Lines End ===== -->
+
+    <!-- ===== Header Start ===== -->
+    <include src="./partials/header.html" />
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== Hero Start ===== -->
+      <section class="pt-35 md:pt-40 xl:pt-46 pb-20 xl:pb-25 overflow-hidden">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+          <div class="flex lg:items-center lg:gap-8 xl:gap-32.5">
+            <div class="animate_left md:w-1/2">
+              <h4 class="text-black dark:text-white text-lg font-medium mb-4.5">🔥 Solid is one of the best option for you.</h4>
+              <h1 class="text-black dark:text-white text-3xl xl:text-hero font-bold mb-5">
+                Complete Tailwind CSS
+                <span class="inline-block relative before:absolute before:bottom-2.5 before:left-0 before:w-full before:h-3 before:bg-titlebg dark:before:bg-titlebgdark before:-z-1">Template</span>
+                for SaaS Website
+              </h1>
+              <p>Solid is a complete Tailwind CSS template crafted specially for SaaS, Software Mobile App and Web App Sites.</p>
+
+              <div class="mt-10">
+                <form action="https://formbold.com/s/unique_form_id" method="POST">
+                  <div class="flex flex-wrap gap-5">
+                    <input
+                      type="text"
+                      placeholder="Enter your email address"
+                      class="dark:bg-black border border-stroke dark:border-strokedark shadow-solid-2 dark:shadow-none rounded-full focus:outline-none focus:border-primary dark:focus:border-primary py-2.5 px-6"
+                    />
+                    <button class="flex bg-black hover:bg-blackho dark:bg-btndark text-white rounded-full ease-in-out duration-300 px-7.5 py-2.5">Get Started</button>
+                  </div>
+                </form>
+
+                <p class="text-black dark:text-white mt-5">Try for free no credit card required.</p>
+              </div>
+            </div>
+            <div class="animate_right md:w-1/2 hidden lg:block">
+              <div class="relative 2xl:-mr-7.5">
+                <img src="./images/shape/shape-01.png" alt="shape" class="absolute -left-11.5 top-0" />
+                <img src="./images/shape/shape-02.svg" alt="shape" class="absolute right-0 bottom-0" />
+                <img src="./images/shape/shape-03.svg" alt="shape" class="absolute -right-6.5 bottom-0" />
+                <div>
+                  <img class="dark:hidden shadow-solid-l" src="./images/hero/hero-light.svg" alt="Hero" />
+                  <img class="hidden dark:block shadow-solid-l" src="./images/hero/hero-dark.svg" alt="Hero" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Hero End ===== -->
+
+      <!-- ===== Clients Start ===== -->
+      <section class="bg-alabaster dark:bg-black border border-x-0 border-y-stroke dark:border-y-strokedark py-11">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+          <div class="grid grid-cols-3 md:grid-cols-6 gap-7.5 lg:gap-12.5 xl:gap-29 justify-center items-center">
+            <a href="#" class="animate_top block">
+              <img class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden" src="./images/brand/brand-light-01.svg" alt="Clients" />
+              <img class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block" src="./images/brand/brand-dark-01.svg" alt="Clients" />
+            </a>
+            <a href="#" class="animate_top block">
+              <img class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden" src="./images/brand/brand-light-02.svg" alt="Clients" />
+              <img class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block" src="./images/brand/brand-dark-02.svg" alt="Clients" />
+            </a>
+            <a href="#" class="animate_top block">
+              <img class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden" src="./images/brand/brand-light-03.svg" alt="Clients" />
+              <img class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block" src="./images/brand/brand-dark-03.svg" alt="Clients" />
+            </a>
+            <a href="#" class="animate_top block">
+              <img class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden" src="./images/brand/brand-light-04.svg" alt="Clients" />
+              <img class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block" src="./images/brand/brand-dark-04.svg" alt="Clients" />
+            </a>
+            <a href="#" class="animate_top block">
+              <img class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden" src="./images/brand/brand-light-05.svg" alt="Clients" />
+              <img class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block" src="./images/brand/brand-dark-05.svg" alt="Clients" />
+            </a>
+            <a href="#" class="animate_top block">
+              <img class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden" src="./images/brand/brand-light-06.svg" alt="Clients" />
+              <img class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block" src="./images/brand/brand-dark-06.svg" alt="Clients" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Clients End ===== -->
+
+      <!-- ===== Features Start ===== -->
+      <section id="features" class="py-20 lg:py-25 xl:py-30">
+        <div class="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+          <!-- Section Title Start -->
+          <div
+            class="animate_top text-center mx-auto"
+            x-data="{ sectionTitle: `SAAS FEATURES`, sectionSubtitle: `Our Software's Core Features`, sectionTitlePara: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          >
+            <include src="./partials/section-title.html" />
+          </div>
+          <!-- Section Title End -->
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5 xl:gap-12.5 mt-12.5 lg:mt-15 xl:mt-20">
+            <!-- Features item Start -->
+            <div class="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection">
+              <div class="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16">
+                <img src="./images/icon/icon-01.svg" alt="Icon" />
+              </div>
+              <h3 class="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5 mb-5">Crafted for SaaS</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <!-- Features item End -->
+
+            <!-- Features item Start -->
+            <div class="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection">
+              <div class="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16">
+                <img src="./images/icon/icon-02.svg" alt="Icon" />
+              </div>
+              <h3 class="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5 mb-5">High-quality Design</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <!-- Features item End -->
+
+            <!-- Features item Start -->
+            <div class="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection">
+              <div class="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16">
+                <img src="./images/icon/icon-03.svg" alt="Icon" />
+              </div>
+              <h3 class="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5 mb-5">All Essential Sections</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <!-- Features item End -->
+
+            <!-- Features item Start -->
+            <div class="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection">
+              <div class="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16">
+                <img src="./images/icon/icon-04.svg" alt="Icon" />
+              </div>
+              <h3 class="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5 mb-5">Speed Optimized</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <!-- Features item End -->
+
+            <!-- Features item Start -->
+            <div class="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection">
+              <div class="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16">
+                <img src="./images/icon/icon-05.svg" alt="Icon" />
+              </div>
+              <h3 class="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5 mb-5">Fully Customizable</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <!-- Features item End -->
+
+            <!-- Features item Start -->
+            <div class="animate_top border border-white shadow-solid-3 rounded-lg p-7.5 xl:p-12.5 transition-all hover:shadow-solid-4 dark:hover:bg-hoverdark dark:border-strokedark dark:bg-blacksection">
+              <div class="flex items-center justify-center rounded-[4px] bg-primary w-16 h-16">
+                <img src="./images/icon/icon-06.svg" alt="Icon" />
+              </div>
+              <h3 class="font-semibold text-xl xl:text-itemtitle text-black dark:text-white mt-7.5 mb-5">Regular Updates</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <!-- Features item End -->
+          </div>
+        </div>
+      </section>
+      <!-- ===== Features End ===== -->
+
+      <!-- ===== About Start ===== -->
+      <section class="pb-20 lg:pb-25 xl:pb-30 overflow-hidden">
+        <div class="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
+          <div class="flex items-center gap-8 lg:gap-32.5">
+            <div class="animate_left hidden md:block md:w-1/2">
+              <img src="./images/about/about-light-01.svg" alt="About" class="dark:hidden" />
+              <img src="./images/about/about-dark-01.svg" alt="About" class="hidden dark:block" />
+            </div>
+            <div class="animate_right md:w-1/2">
+              <h4 class="text-black dark:text-white font-medium uppercase">
+                <a href="#" class="bg-meta text-white text-metatitle inline-flex rounded-full py-1 px-4.5 mr-4 mb-4">New</a> start tracking visitors
+              </h4>
+              <h2 class="relative font-bold text-black dark:text-white text-3xl xl:text-hero mb-6">
+                Know More About Our
+                <span class="inline-block relative before:absolute before:bottom-2.5 before:left-0 before:w-full before:h-3 before:bg-titlebg dark:before:bg-titlebgdark before:-z-1">Product.</span>
+              </h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+
+              <div class="mt-7.5 flex items-center gap-5">
+                <div class="w-15 h-15 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
+                  <p class="text-black dark:text-white font-semibold text-metatitle2">01</p>
+                </div>
+                <div class="w-3/4">
+                  <h5 class="text-black dark:text-white text-metatitle2 mb-0.5">Lorem ipsum dolor.</h5>
+                  <p>Ut ultricies lacus non fermentum ultrices.</p>
+                </div>
+              </div>
+              <div class="mt-7.5 flex items-center gap-5">
+                <div class="w-15 h-15 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
+                  <p class="text-black dark:text-white font-semibold text-metatitle2">02</p>
+                </div>
+                <div class="w-3/4">
+                  <h5 class="text-black dark:text-white text-metatitle2 mb-0.5">Fusce consectetur le.</h5>
+                  <p>consectetur adipiscing elit fermentum ultricies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== About End ===== -->
+
+      <!-- ===== About Two Start ===== -->
+      <section>
+        <div class="mx-auto max-w-c-1235 px-4 md:px-8 2xl:px-0 overflow-hidden">
+          <div class="flex items-center gap-8 lg:gap-32.5">
+            <div class="animate_left md:w-1/2">
+              <h4 class="text-black dark:text-white font-medium uppercase">grow your business faster</h4>
+              <h2 class="relative font-bold text-black dark:text-white text-3xl xl:text-hero mb-6">
+                Track Your Audience
+                <span class="inline-block relative before:absolute before:bottom-2.5 before:left-0 before:w-full before:h-3 before:bg-titlebg2 dark:before:bg-titlebgdark before:-z-1">Activities</span>
+              </h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+
+              <a href="#" class="flex items-center gap-2.5 text-black dark:text-white mt-7.5">
+                Know More
+                <img class="dark:hidden" src="./images/icon/icon-arrow-light.svg" alt="Arrow" />
+                <img class="hidden dark:block" src="./images/icon/icon-arrow-dark.svg" alt="Arrow" />
+              </a>
+            </div>
+            <div class="animate_right hidden md:block md:w-1/2">
+              <img src="./images/about/about-light-02.svg" alt="About" class="dark:hidden" />
+              <img src="./images/about/about-dark-02.svg" alt="About" class="hidden dark:block" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== About Two End ===== -->
+
+      <!-- ===== Features Tab Start ===== -->
+      <section class="pt-18.5 pb-20 lg:pb-22.5 relative" x-data="{ featuresTab: 'tabOne' }">
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+          <div class="absolute top-0 -z-1">
+            <img class="dark:hidden" src="./images/shape/shape-dotted-light.svg" alt="Dotted Shape" />
+            <img class="hidden dark:block" src="./images/shape/shape-dotted-dark.svg" alt="Dotted Shape" />
+          </div>
+
+          <!-- Tab Menues Start -->
+          <div
+            class="animate_top border border-stroke dark:border-strokedark dark:bg-blacksection shadow-solid-5 dark:shadow-solid-6 bg-white rounded-[10px] flex flex-wrap md:flex-nowrap md:items-center justify-center lg:gap-7.5 xl:gap-12.5 mb-15 xl:mb-21.5"
+          >
+            <div
+              class="relative cursor-pointer w-full md:w-auto border-b last:border-0 md:border-0 border-stroke dark:border-strokedark flex items-center gap-4 py-2 xl:py-5 px-6 xl:px-13.5"
+              :class="{ 'active before:w-full before:h-1 before:bg-primary before:absolute before:bottom-0 before:left-0 before:rounded-tl-[4px] before:rounded-tr-[4px]': featuresTab === 'tabOne' }"
+              @click.prevent="featuresTab = 'tabOne'"
+            >
+              <div class="w-12.5 h-12.5 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
+                <p class="text-black dark:text-white font-medium text-metatitle3">01</p>
+              </div>
+              <div class="lg:w-auto md:w-3/5">
+                <h5 class="text-black dark:text-white text-sm xl:text-regular font-medium">Clean User Interface</h5>
+              </div>
+            </div>
+            <div
+              class="relative cursor-pointer w-full md:w-auto border-b last:border-0 md:border-0 border-stroke dark:border-strokedark flex items-center gap-4 py-2 xl:py-5 px-6 xl:px-13.5"
+              :class="{ 'active before:w-full before:h-1 before:bg-primary before:absolute before:bottom-0 before:left-0 before:rounded-tl-[4px] before:rounded-tr-[4px]': featuresTab === 'tabTwo' }"
+              @click.prevent="featuresTab = 'tabTwo'"
+            >
+              <div class="w-12.5 h-12.5 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
+                <p class="text-black dark:text-white font-medium text-metatitle3">02</p>
+              </div>
+              <div class="lg:w-auto md:w-3/5">
+                <h5 class="text-black dark:text-white text-sm xl:text-regular font-medium">Cloud Data Save Options</h5>
+              </div>
+            </div>
+            <div
+              class="relative cursor-pointer w-full md:w-auto border-b last:border-0 md:border-0 border-stroke dark:border-strokedark flex items-center gap-4 py-2 xl:py-5 px-6 xl:px-13.5"
+              :class="{ 'active before:w-full before:h-1 before:bg-primary before:absolute before:bottom-0 before:left-0 before:rounded-tl-[4px] before:rounded-tr-[4px]': featuresTab === 'tabThree' }"
+              @click.prevent="featuresTab = 'tabThree'"
+            >
+              <div class="w-12.5 h-12.5 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
+                <p class="text-black dark:text-white font-medium text-metatitle3">03</p>
+              </div>
+              <div class="lg:w-auto md:w-3/5">
+                <h5 class="text-black dark:text-white text-sm xl:text-regular font-medium">Management And Collaboration</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Tab Menues End -->
+
+          <!-- Tab Content Start -->
+          <div class="animate_top mx-auto max-w-c-1154">
+            <div x-show="featuresTab === 'tabOne'">
+              <div class="flex items-center gap-8 lg:gap-19">
+                <div class="md:w-1/2">
+                  <h2 class="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-bold mb-7">Solid Has Neat & Clean User Interface.</h2>
+                  <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+                  <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                </div>
+                <div class="hidden md:block md:w-1/2">
+                  <img src="./images/features/features-light-01.svg" alt="Features" class="dark:hidden" />
+                  <img src="./images/features/features-dark-01.svg" alt="Features" class="hidden dark:block" />
+                </div>
+              </div>
+            </div>
+
+            <div x-show="featuresTab === 'tabTwo'">
+              <div class="flex items-center gap-8 lg:gap-19">
+                <div class="md:w-1/2">
+                  <h2 class="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-bold mb-7">Solid Has Cloud Data Save Options.</h2>
+                  <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+                  <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                </div>
+                <div class="hidden md:block md:w-1/2">
+                  <img src="./images/features/features-light-01.svg" alt="Features" class="dark:hidden" />
+                  <img src="./images/features/features-dark-01.svg" alt="Features" class="hidden dark:block" />
+                </div>
+              </div>
+            </div>
+
+            <div x-show="featuresTab === 'tabThree'">
+              <div class="flex items-center gap-8 lg:gap-19">
+                <div class="md:w-1/2">
+                  <h2 class="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-bold mb-7">Solid Has Management And Collaboration.</h2>
+                  <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+                  <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                </div>
+                <div class="hidden md:block md:w-1/2">
+                  <img src="./images/features/features-light-01.svg" alt="Features" class="dark:hidden" />
+                  <img src="./images/features/features-dark-01.svg" alt="Features" class="hidden dark:block" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tab Content End -->
+        </div>
+      </section>
+      <!-- ===== Features Tab End ===== -->
+
+      <!-- ===== Funfact Start ===== -->
+      <section class="py-20 lg:py-22.5 px-4 md:px-8 2xl:px-0">
+        <div
+          class="mx-auto max-w-c-1390 py-22.5 xl:py-27.5 relative z-1 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:bg-blacksection dark:stroke-strokedark"
+        >
+          <img src="./images/shape/shape-04.svg" alt="Man" class="absolute -top-25 -left-15 lg:left-0 -z-1" />
+          <img src="./images/shape/shape-05.svg" alt="Doodle" class="absolute bottom-0 right-0 -z-1" />
+          <img src="./images/shape/shape-dotted-light-02.svg" alt="Dotted" class="absolute top-0 left-0 -z-1 dark:hidden" />
+          <img src="./images/shape/shape-dotted-dark-02.svg" alt="Dotted" class="absolute top-0 left-0 -z-1 hidden dark:block" />
+
+          <div class="animate_top mx-auto text-center md:w-4/5 lg:w-2/3 xl:w-1/2 mb-12.5 lg:mb-17.5 px-4 md:px-0">
+            <h2 class="font-bold text-black dark:text-white text-3xl xl:text-sectiontitle3 mb-4">Trusted by Global Companies.</h2>
+            <p class="lg:w-11/12 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-8 lg:gap-42.5">
+            <div class="animate_top text-center">
+              <h3 class="font-bold text-black dark:text-white text-3xl xl:text-sectiontitle3 mb-2.5">500K</h3>
+              <p class="text-lg lg:text-para2">World Wide Clients</p>
+            </div>
+            <div class="animate_top text-center">
+              <h3 class="font-bold text-black dark:text-white text-3xl xl:text-sectiontitle3 mb-2.5">1M+</h3>
+              <p class="text-lg lg:text-para2">Downloads</p>
+            </div>
+            <div class="animate_top text-center">
+              <h3 class="font-bold text-black dark:text-white text-3xl xl:text-sectiontitle3 mb-2.5">865</h3>
+              <p class="text-lg lg:text-para2">Winning Award</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Funfact End ===== -->
+
+      <!-- ===== Integrations Start ===== -->
+      <section>
+        <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+          <!-- Section Title Start -->
+          <div
+            class="animate_top text-center mx-auto"
+            x-data="{ sectionTitle: `INTEGRATIONS`, sectionSubtitle: `Remotely Maintain Your Data, From Anywhere, Anytime.`, sectionTitlePara: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          >
+            <include src="./partials/section-title.html" />
+          </div>
+          <!-- Section Title End -->
+        </div>
+
+        <div class="mx-auto max-w-c-1154 px-4 md:px-8 xl:px-0 relative z-50 mt-15 xl:mt-20">
+          <div class="absolute -top-3/4 -z-1">
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="dark:hidden" />
+            <img src="./images/shape/shape-dotted-dark.svg" alt="Dotted" class="hidden dark:block" />
+          </div>
+          <div class="flex flex-wrap gap-y-10 justify-around">
+            <div class="animate_top w-1/6">
+              <div class="inline-block rounded-[10px] shadow-solid-7 bg-white dark:bg-btndark p-4.5">
+                <img src="./images/brand/brand-07.svg" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top w-1/6"></div>
+
+            <div class="animate_top w-1/6">
+              <div class="inline-block rounded-[10px] shadow-solid-7 bg-white dark:bg-btndark p-4.5">
+                <img src="./images/brand/brand-08.svg" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="bg-[#FFDB26] rounded-full w-[11px] h-[11px]"></div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="inline-block rounded-[10px] shadow-solid-7 bg-white dark:bg-btndark p-4.5">
+                <img src="./images/brand/brand-09.svg" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top w-1/6"></div>
+
+            <div class="animate_top w-1/6">
+              <div class="bg-[#62E888] rounded-full w-[15px] h-[15px]"></div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="inline-block rounded-[10px] shadow-solid-7 bg-white dark:bg-btndark p-4.5">
+                <img src="./images/brand/brand-10.svg" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="bg-[#EF5C00] rounded-full w-[23px] h-[23px]"></div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="inline-block rounded-[10px] shadow-solid-7 bg-white dark:bg-btndark p-4.5">
+                <img src="./images/brand/brand-11.svg" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="bg-[#016BFF] rounded-full w-[15px] h-[15px]"></div>
+            </div>
+
+            <div class="animate_top w-1/6">
+              <div class="inline-block rounded-[10px] shadow-solid-7 bg-white dark:bg-btndark p-4.5">
+                <img src="./images/brand/brand-12.svg" alt="Brand" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Integrations End ===== -->
+
+      <!-- ===== CTA Start ===== -->
+      <section class="py-20 lg:py-25 xl:py-30 px-4 md:px-8 2xl:px-0 overflow-hidden">
+        <div
+          class="mx-auto max-w-c-1390 px-7.5 md:px-12.5 xl:px-17.5 py-12.5 xl:py-0 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:bg-blacksection dark:stroke-strokedark"
+        >
+          <div class="flex flex-wrap md:flex-nowrap md:items-center md:justify-between gap-8 md:gap-0">
+            <div class="animate_left md:w-[70%] lg:w-1/2">
+              <h2 class="text-black dark:text-white text-3xl xl:text-sectiontitle4 font-bold mb-4 w-11/12">Join With Us Today & Increase Your Productivity</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+            </div>
+            <div class="animate_right lg:w-[45%]">
+              <div class="flex items-center justify-end xl:justify-between">
+                <img src="./images/shape/shape-06.svg" alt="Saly" class="hidden xl:block" />
+                <a href="signup.html" class="inline-flex items-center gap-2.5 font-medium text-white dark:text-black bg-black dark:bg-white rounded-full py-3 px-6">
+                  Sign up free
+                  <img src="./images/icon/icon-arrow-dark.svg" alt="Arrow" class="dark:hidden" />
+                  <img src="./images/icon/icon-arrow-light.svg" alt="Arrow" class="hidden dark:block" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== CTA End ===== -->
+
+      <!-- ===== FAQ Start ===== -->
+      <section class="pb-20 lg:pb-25 xl:pb-30 overflow-hidden">
+        <div class="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0 relative">
+          <div class="absolute -bottom-7.5 -z-1">
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="dark:hidden" />
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="hidden dark:block" />
+          </div>
+          <div class="flex flex-wrap md:flex-nowrap md:items-center gap-8 xl:gap-32.5">
+            <div class="animate_left md:w-2/5 lg:w-1/2">
+              <h4 class="text-black dark:text-white font-medium uppercase">OUR FAQS</h4>
+              <h2 class="relative font-bold text-black dark:text-white text-3xl xl:text-hero mb-6">
+                Frequently Asked
+                <span class="inline-block relative before:absolute before:bottom-2.5 before:left-0 before:w-full before:h-3 before:bg-titlebg2 dark:before:bg-titlebgdark before:-z-1">Questions</span>
+              </h2>
+
+              <a href="#" class="flex items-center gap-2.5 text-black dark:text-white mt-25">
+                Know More
+                <img class="dark:hidden" src="./images/icon/icon-arrow-light.svg" alt="Arrow" />
+                <img class="hidden dark:block" src="./images/icon/icon-arrow-dark.svg" alt="Arrow" />
+              </a>
+            </div>
+
+            <div class="animate_right md:w-3/5 lg:w-1/2">
+              <div class="bg-white dark:bg-blacksection dark:border dark:border-strokedark shadow-solid-8 rounded-lg" x-data="{selected:0}">
+                <div class="flex flex-col border-b border-stroke dark:border-strokedark">
+                  <h4
+                    @click="selected !== 0 ? selected = 0 : selected = null"
+                    class="cursor-pointer flex justify-between items-center font-medium text-metatitle3 text-black dark:text-white py-5 lg:py-7.5 px-6 lg:px-9"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur.
+                    <img src="./images/icon/icon-plus-light.svg" alt="plus" class="dark:hidden" :class="selected == 0 ? 'hidden' : 'block'" />
+                    <img src="./images/icon/icon-minus-light.svg" alt="minus" class="dark:hidden" :class="selected == 0 ? 'block' : 'hidden'" />
+                    <img src="./images/icon/icon-plus-dark.svg" alt="plus" class="hidden dark:block" :class="selected == 0 ? 'dark:hidden' : 'dark:block'" />
+                    <img src="./images/icon/icon-minus-dark.svg" alt="minus" class="hidden dark:block" :class="selected == 0 ? 'dark:block' : 'dark:hidden'" />
+                  </h4>
+                  <p x-show="selected == 0" class="py-5 lg:py-7.5 px-6 lg:px-9 border-t border-stroke dark:border-strokedark">
+                    We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.
+                  </p>
+                </div>
+                <div class="flex flex-col border-b border-stroke dark:border-strokedark">
+                  <h4
+                    @click="selected !== 1 ? selected = 1 : selected = null"
+                    class="cursor-pointer flex justify-between items-center font-medium text-metatitle3 text-black dark:text-white py-5 lg:py-7.5 px-6 lg:px-9"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur.
+                    <img src="./images/icon/icon-plus-light.svg" alt="plus" class="dark:hidden" :class="selected == 1 ? 'hidden' : 'block'" />
+                    <img src="./images/icon/icon-minus-light.svg" alt="minus" class="dark:hidden" :class="selected == 1 ? 'block' : 'hidden'" />
+                    <img src="./images/icon/icon-plus-dark.svg" alt="plus" class="hidden dark:block" :class="selected == 1 ? 'dark:hidden' : 'dark:block'" />
+                    <img src="./images/icon/icon-minus-dark.svg" alt="minus" class="hidden dark:block" :class="selected == 1 ? 'dark:block' : 'dark:hidden'" />
+                  </h4>
+                  <p x-show="selected == 1" class="py-5 lg:py-7.5 px-6 lg:px-9 border-t border-stroke dark:border-strokedark">
+                    We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.
+                  </p>
+                </div>
+                <div class="flex flex-col">
+                  <h4
+                    @click="selected !== 2 ? selected = 2 : selected = null"
+                    :class="{'cursor-pointer flex justify-between items-center font-medium text-metatitle3 text-black dark:text-white py-5 lg:py-7.5 px-6 lg:px-9': true, 'rounded-b': selected != 2}"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur.
+                    <img src="./images/icon/icon-plus-light.svg" alt="plus" class="dark:hidden" :class="selected == 2 ? 'hidden' : 'block'" />
+                    <img src="./images/icon/icon-minus-light.svg" alt="minus" class="dark:hidden" :class="selected == 2 ? 'block' : 'hidden'" />
+                    <img src="./images/icon/icon-plus-dark.svg" alt="plus" class="hidden dark:block" :class="selected == 2 ? 'dark:hidden' : 'dark:block'" />
+                    <img src="./images/icon/icon-minus-dark.svg" alt="minus" class="hidden dark:block" :class="selected == 2 ? 'dark:block' : 'dark:hidden'" />
+                  </h4>
+                  <p x-show="selected == 2" :class="{'py-5 lg:py-7.5 px-6 lg:px-9 border-t border-stroke dark:border-strokedark': true, 'rounded-b': selected == 2}">
+                    We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== FAQ End ===== -->
+
+      <!-- ===== Testimonials Start ===== -->
+      <section>
+        <div class="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+          <!-- Section Title Start -->
+          <div
+            class="animate_top text-center mx-auto"
+            x-data="{ sectionTitle: `TESTIMONIALS`, sectionSubtitle: `Client’s Testimonials`, sectionTitlePara: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          >
+            <include src="./partials/section-title.html" />
+          </div>
+          <!-- Section Title End -->
+        </div>
+
+        <div class="animate_top mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0 mt-15 xl:mt-20">
+          <!-- Slider main container -->
+          <div class="swiper testimonial-01 pb-22.5">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="bg-white rounded-lg shadow-solid-9 dark:shadow-none dark:bg-blacksection dark:border dark:border-strokedark p-9 pt-7.5">
+                  <div class="flex justify-between border-b border-stroke dark:border-strokedark pb-6 mb-7.5">
+                    <div>
+                      <h4 class="text-black dark:text-white text-metatitle3 mb-1.5">Devid Smith</h4>
+                      <p>Founter @democompany</p>
+                    </div>
+                    <img class="" src="./images/user/user-01.svg" alt="User" />
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="bg-white rounded-lg shadow-solid-9 dark:shadow-none dark:bg-blacksection dark:border dark:border-strokedark p-9 pt-7.5">
+                  <div class="flex justify-between border-b border-stroke dark:border-strokedark pb-6 mb-7.5">
+                    <div>
+                      <h4 class="text-black dark:text-white text-metatitle3 mb-1.5">Jhon Abraham</h4>
+                      <p>Founter @democompany</p>
+                    </div>
+                    <img class="" src="./images/user/user-02.svg" alt="User" />
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.</p>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Testimonials End ===== -->
+
+      <!-- ===== Pricing Table Start ===== -->
+      <section class="pt-15 lg:pt-20 xl:pt-25 pb-20 lg:pb-25 xl:pb-30">
+        <div class="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+          <!-- Section Title Start -->
+          <div
+            class="animate_top text-center mx-auto"
+            x-data="{ sectionTitle: `PRICING PLANS`, sectionSubtitle: `Simple Pricing`, sectionTitlePara: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          >
+            <include src="./partials/section-title.html" />
+          </div>
+          <!-- Section Title End -->
+        </div>
+
+        <div class="mx-auto max-w-[1207px] px-4 md:px-8 xl:px-0 relative mt-15 xl:mt-20">
+          <div class="absolute -bottom-15 -z-1">
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="dark:hidden" />
+          </div>
+          <div class="flex flex-wrap lg:flex-nowrap justify-center gap-7.5 xl:gap-12.5">
+            <!-- Pricing Item -->
+            <div class="animate_top md:w-[45%] lg:w-1/3 group relative bg-white dark:bg-blacksection rounded-lg shadow-solid-10 dark:shadow-none border border-stroke dark:border-strokedark p-7.5 xl:p-12.5">
+              <h3 class="text-black dark:text-white font-bold text-3xl xl:text-sectiontitle3 mb-7.5">$10 <span class="text-regular text-waterloo dark:text-manatee">/month</span></h3>
+              <h4 class="text-black dark:text-white font-medium text-para2 mb-2.5">Small Pack</h4>
+              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+
+              <div class="border-t border-stroke dark:border-strokedark mt-9 pt-9 pb-12.5">
+                <ul>
+                  <li class="text-black dark:text-manatee mb-4 last:mb-0">300 GB Storage</li>
+                  <li class="text-black dark:text-manatee mb-4 last:mb-0">Unlimited Photos and Videos</li>
+                  <li class="text-black dark:text-manatee mb-4 last:mb-0 opacity-40">Exclusive Support</li>
+                  <li class="text-black dark:text-manatee mb-4 last:mb-0 opacity-40">Custom Branding Strategy</li>
+                </ul>
+              </div>
+
+              <a href="#" class="inline-flex items-center gap-2.5 text-primary dark:text-white dark:hover:text-primary font-medium transition-all duration-300">
+                Get the Plan
+                <svg class="fill-primary dark:fill-white dark:hover:fill-primary transition-all duration-300" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.4767 6.17348L6.00668 1.70348L7.18501 0.525146L13.6667 7.00681L7.18501 13.4885L6.00668 12.3101L10.4767 7.84015H0.333344V6.17348H10.4767Z" fill="" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Pricing Item -->
+            <div class="animate_top md:w-[45%] lg:w-1/3 group relative bg-white dark:bg-blacksection rounded-lg shadow-solid-10 dark:shadow-none border border-stroke dark:border-strokedark p-7.5 xl:p-12.5">
+              <div class="absolute top-7.5 -right-3.5 -rotate-90 rounded-tl-full rounded-bl-full bg-primary font-medium text-white text-metatitle uppercase py-1.5 px-4.5">popular</div>
+
+              <h3 class="text-black dark:text-white font-bold text-3xl xl:text-sectiontitle3 mb-7.5">$59 <span class="text-regular text-waterloo dark:text-manatee">/month</span></h3>
+              <h4 class="text-black dark:text-white font-medium text-para2 mb-2.5">Medium Pack</h4>
+              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+
+              <div class="border-t border-stroke dark:border-strokedark mt-9 pt-9 pb-12.5">
+                <ul>
+                  <li class="text-black dark:text-manatee mb-4 last:mb-0">300 GB Storage</li>
+                  <li class="text-black dark:text-manatee mb-4 last:mb-0">Unlimited Photos and Videos</li>
+                  <li class="text-black dark:text-manatee mb-4 last:mb-0">Exclusive Support</li>
+                  <li class="text-black dark:text-manatee mb-4 last:mb-0 opacity-40">Custom Branding Strategy</li>
+                </ul>
+              </div>
+
+              <a href="#" class="inline-flex items-center gap-2.5 text-primary dark:text-white dark:hover:text-primary font-medium transition-all duration-300">
+                Get the Plan
+                <svg class="fill-primary dark:fill-white dark:hover:fill-primary transition-all duration-300" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.4767 6.17348L6.00668 1.70348L7.18501 0.525146L13.6667 7.00681L7.18501 13.4885L6.00668 12.3101L10.4767 7.84015H0.333344V6.17348H10.4767Z" fill="" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Pricing Item -->
+            <div class="animate_top md:w-[45%] lg:w-1/3 group relative bg-white dark:bg-blacksection rounded-lg shadow-solid-10 dark:shadow-none border border-stroke dark:border-strokedark p-7.5 xl:p-12.5">
+              <h3 class="text-black dark:text-white font-bold text-3xl xl:text-sectiontitle3 mb-7.5">$189 <span class="text-regular text-waterloo dark:text-manatee">/month</span></h3>
+              <h4 class="text-black dark:text-white font-medium text-para2 mb-2.5">Large Pack</h4>
+              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+
+              <div class="border-t border-stroke dark:border-strokedark mt-9 pt-9 pb-12.5">
+                <ul>
+                  <li class="text-black dark:text-manatee mb-4 last:mb-0">300 GB Storage</li>
+                  <li class="text-black dark:text-manatee mb-4 last:mb-0">Unlimited Photos and Videos</li>
+                  <li class="text-black dark:text-manatee mb-4 last:mb-0">Exclusive Support</li>
+                  <li class="text-black dark:text-manatee mb-4 last:mb-0">Custom Branding Strategy</li>
+                </ul>
+              </div>
+
+              <a href="#" class="inline-flex items-center gap-2.5 text-primary dark:text-white dark:hover:text-primary font-medium transition-all duration-300">
+                Get the Plan
+                <svg class="fill-primary dark:fill-white dark:hover:fill-primary transition-all duration-300" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.4767 6.17348L6.00668 1.70348L7.18501 0.525146L13.6667 7.00681L7.18501 13.4885L6.00668 12.3101L10.4767 7.84015H0.333344V6.17348H10.4767Z" fill="" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Pricing Table End ===== -->
+
+      <!-- ===== Contact Start ===== -->
+      <section id="support" class="px-4 md:px-8 2xl:px-0">
+        <div class="mx-auto max-w-c-1390 relative pt-10 lg:pt-15 xl:pt-20 px-7.5 lg:px-15 xl:px-20 overflow-hidden">
+          <div class="absolute -z-1 rounded-lg left-0 top-0 w-full h-2/3 bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] dark:bg-gradient-to-t dark:from-[#24283E] dark:to-[#252A42]"></div>
+          <div class="absolute -z-1 bottom-5 left-0 w-full h-1/3">
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="dark:hidden" />
+            <img src="./images/shape/shape-dotted-dark.svg" alt="Dotted" class="hidden dark:block" />
+          </div>
+
+          <div class="flex flex-wrap md:flex-nowrap flex-col-reverse md:flex-row gap-8 xl:gap-20 md:justify-between">
+            <div class="animate_top w-full md:w-3/5 lg:w-3/4 shadow-solid-8 rounded-lg bg-white dark:bg-black dark:border dark:border-strokedark p-7.5 xl:p-15">
+              <h2 class="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-semibold mb-15">Send a message</h2>
+
+              <form action="https://formbold.com/s/unique_form_id" method="POST">
+                <div class="flex flex-col lg:flex-row lg:justify-between gap-7.5 lg:gap-14 mb-7.5">
+                  <input
+                    type="text"
+                    placeholder="Full name"
+                    class="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
+                  />
+
+                  <input
+                    type="email"
+                    placeholder="Email address"
+                    class="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
+                  />
+                </div>
+
+                <div class="flex flex-col lg:flex-row lg:justify-between gap-7.5 lg:gap-14 mb-12.5">
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    class="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
+                  />
+
+                  <input
+                    type="text"
+                    placeholder="Phone number"
+                    class="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
+                  />
+                </div>
+
+                <div class="flex mb-11.5">
+                  <textarea
+                    placeholder="Message"
+                    rows="4"
+                    class="w-full bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white"
+                  ></textarea>
+                </div>
+
+                <div class="flex flex-wrap xl:justify-between gap-10 xl:gap-15">
+                  <div>
+                    <label for="supportCheckbox" class="max-w-[425px] flex cursor-pointer select-none hover:text-primary">
+                      <div class="relative">
+                        <input type="checkbox" id="supportCheckbox" class="sr-only" />
+                        <div class="box mr-4 mt-1 flex h-5 w-5 items-center justify-center rounded border border-stroke dark:border-strokedark">
+                          <span class="opacity-0">
+                            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" class="stroke-current">
+                              <path
+                                d="M10.0915 0.951972L10.0867 0.946075L10.0813 0.940568C9.90076 0.753564 9.61034 0.753146 9.42927 0.939309L4.16201 6.22962L1.58507 3.63469C1.40401 3.44841 1.11351 3.44879 0.932892 3.63584C0.755703 3.81933 0.755703 4.10875 0.932892 4.29224L0.932878 4.29225L0.934851 4.29424L3.58046 6.95832C3.73676 7.11955 3.94983 7.2 4.1473 7.2C4.36196 7.2 4.55963 7.11773 4.71406 6.9584L10.0468 1.60234C10.2436 1.4199 10.2421 1.1339 10.0915 0.951972ZM4.2327 6.30081L4.2317 6.2998C4.23206 6.30015 4.23237 6.30049 4.23269 6.30082L4.2327 6.30081Z"
+                                stroke-width="0.4"
+                              ></path>
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                      By clicking Checkbox, you agree to use our “Form” terms And consent cookie usage in browser.
+                    </label>
+                  </div>
+
+                  <button class="inline-flex items-center gap-2.5 bg-black hover:bg-blackho ease-in-out duration-300 dark:bg-btndark font-medium text-white rounded-full px-6 py-3">
+                    Send Message
+                    <svg class="fill-white" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z" fill="" />
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div class="animate_top w-full md:w-2/5 lg:w-[26%] md:p-7.5 xl:pt-15">
+              <h2 class="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-semibold mb-12.5">Find us</h2>
+
+              <div class="mb-7 5">
+                <h4 class="font-medium text-black dark:text-white text-metatitle3 mb-4">Our Loaction</h4>
+                <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
+              </div>
+              <div class="mb-7 5">
+                <h4 class="font-medium text-black dark:text-white text-metatitle3 mb-4">Email Address</h4>
+                <p><a href="#">yourmail@domainname.com</a></p>
+              </div>
+              <div>
+                <h4 class="font-medium text-black dark:text-white text-metatitle3 mb-4">Phone Number</h4>
+                <p><a href="#">+009 42334 6343 843</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Contact End ===== -->
+
+      <!-- ===== Blog Start ===== -->
+      <section class="py-20 lg:py-25 xl:py-30">
+        <div class="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+          <!-- Section Title Start -->
+          <div
+            class="animate_top text-center mx-auto"
+            x-data="{ sectionTitle: `NEWS & BLOGS`, sectionSubtitle: `Latest News & Blogs`, sectionTitlePara: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          >
+            <include src="./partials/section-title.html" />
+          </div>
+          <!-- Section Title End -->
+        </div>
+
+        <div class="mx-auto max-w-c-1280 px-4 md:px-8 xl:px-0 mt-15 xl:mt-20">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5 xl:gap-10">
+            <!-- Blog Item -->
+            <div class="animate_top bg-white dark:bg-blacksection rounded-lg shadow-solid-8 p-4 pb-9">
+              <a href="#" class="block">
+                <img src="./images/blog/blog-01.png" alt="Blog" />
+              </a>
+
+              <div class="px-4">
+                <h4 class="font-medium text-lg xl:text-itemtitle2 text-black hover:text-primary dark:text-white mt-7.5 mb-3.5">
+                  <a href="blog-single.html">Free advertising for your online business</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top bg-white dark:bg-blacksection rounded-lg shadow-solid-8 p-4 pb-9">
+              <a href="#" class="block">
+                <img src="./images/blog/blog-02.png" alt="Blog" />
+              </a>
+
+              <div class="px-4">
+                <h4 class="font-medium text-lg xl:text-itemtitle2 text-black hover:text-primary dark:text-white mt-7.5 mb-3.5">
+                  <a href="bog-single.html">9 simple ways to improve your design skills</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top bg-white dark:bg-blacksection rounded-lg shadow-solid-8 p-4 pb-9">
+              <a href="#" class="block">
+                <img src="./images/blog/blog-03.png" alt="Blog" />
+              </a>
+
+              <div class="px-4">
+                <h4 class="font-medium text-lg xl:text-itemtitle2 text-black hover:text-primary dark:text-white mt-7.5 mb-3.5">
+                  <a href="blog-single.html">Tips to quickly improve your coding speed.</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Blog End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <include src="./partials/footer.html" />
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <include src="./partials/scrolltop.html" />
+    <!-- ====== Back To Top End ===== -->
+  </body>
+</html>

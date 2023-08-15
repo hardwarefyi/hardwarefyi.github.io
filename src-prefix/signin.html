@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sing In | Solid - Tailwind CSS Saas Template</title>
+  </head>
+  <body
+    x-data="{ page: 'signin', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'ud-dark ud-bg-black': darkMode === true}"
+  >
+    <!-- ===== Bg Lines Start ===== -->
+    <include src="./partials/lines.html" />
+    <!-- ===== Bg Lines End ===== -->
+
+    <!-- ===== Header Start ===== -->
+    <include src="./partials/header.html" />
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== SignIn Form Start ===== -->
+      <section class="ud-pt-32.5 lg:ud-pt-45 xl:ud-pt-50 ud-pb-12.5 lg:ud-pb-25 xl:ud-pb-30">
+        <div class="ud-mx-auto ud-max-w-c-1016 ud-relative ud-z-1 ud-pt-10 lg:ud-pt-15 xl:ud-pt-20 ud-pb-7.5 ud-px-7.5 lg:ud-px-15 xl:ud-px-20">
+          <div
+            class="ud-absolute -ud-z-1 ud-rounded-lg ud-left-0 ud-top-0 ud-w-full ud-h-2/3 ud-bg-gradient-to-t ud-from-[#F8F9FF] ud-to-[#DEE7FF] dark:ud-bg-gradient-to-t dark:ud-from-[#24283E] dark:ud-to-[#252A42]"
+          ></div>
+          <div class="ud-absolute -ud-z-1 ud-bottom-17.5 ud-left-0 ud-w-full ud-h-1/3">
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="dark:ud-hidden" />
+            <img src="./images/shape/shape-dotted-dark.svg" alt="Dotted" class="ud-hidden dark:ud-block" />
+          </div>
+
+          <div class="animate_top ud-shadow-solid-8 ud-rounded-lg ud-bg-white dark:ud-bg-black dark:ud-border dark:ud-border-strokedark ud-pt-7.5 xl:ud-pt-15 ud-px-7.5 xl:ud-px-15">
+            <h2 class="ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-sectiontitle2 ud-font-semibold ud-mb-15">Login to Your Account</h2>
+
+            <form action="https://formbold.com/s/unique_form_id" method="POST">
+              <div class="ud-flex ud-flex-col lg:ud-flex-row lg:ud-justify-between ud-gap-7.5 lg:ud-gap-14 ud-mb-7.5 lg:ud-mb-12.5">
+                <input
+                  type="text"
+                  placeholder="Username or email"
+                  class="ud-w-full lg:ud-w-1/2 !ud-bg-white dark:!ud-bg-black ud-border-b ud-border-stroke dark:ud-border-strokedark focus-visible:ud-outline-none focus:ud-border-waterloo dark:focus:ud-border-manatee focus:placeholder:ud-text-black dark:focus:placeholder:ud-text-white ud-pb-3.5"
+                />
+
+                <input
+                  type="password"
+                  placeholder="Password"
+                  class="ud-w-full lg:ud-w-1/2 !ud-bg-white dark:!ud-bg-black ud-border-b ud-border-stroke dark:ud-border-strokedark focus-visible:ud-outline-none focus:ud-border-waterloo dark:focus:ud-border-manatee focus:placeholder:ud-text-black dark:focus:placeholder:ud-text-white ud-pb-3.5"
+                />
+              </div>
+
+              <div class="ud-flex ud-flex-wrap ud-items-center md:ud-justify-between ud-gap-10 xl:ud-gap-15">
+                <div class="ud-flex ud-flex-wrap ud-gap-4 md:ud-gap-10">
+                  <label for="supportCheckbox" class="ud-max-w-[425px] ud-flex ud-cursor-pointer ud-select-none hover:ud-text-primary">
+                    <div class="ud-relative">
+                      <input type="checkbox" id="supportCheckbox" class="ud-sr-only" />
+                      <div class="box ud-mr-4 ud-mt-1 ud-flex ud-h-5 ud-w-5 ud-items-center ud-justify-center ud-rounded ud-border ud-border-stroke dark:ud-border-strokedark">
+                        <span class="ud-opacity-0">
+                          <svg width="11" height="8" viewBox="0 0 11 8" fill="none" class="ud-stroke-current">
+                            <path
+                              d="M10.0915 0.951972L10.0867 0.946075L10.0813 0.940568C9.90076 0.753564 9.61034 0.753146 9.42927 0.939309L4.16201 6.22962L1.58507 3.63469C1.40401 3.44841 1.11351 3.44879 0.932892 3.63584C0.755703 3.81933 0.755703 4.10875 0.932892 4.29224L0.932878 4.29225L0.934851 4.29424L3.58046 6.95832C3.73676 7.11955 3.94983 7.2 4.1473 7.2C4.36196 7.2 4.55963 7.11773 4.71406 6.9584L10.0468 1.60234C10.2436 1.4199 10.2421 1.1339 10.0915 0.951972ZM4.2327 6.30081L4.2317 6.2998C4.23206 6.30015 4.23237 6.30049 4.23269 6.30082L4.2327 6.30081Z"
+                              stroke-width="0.4"
+                            ></path>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    Keep me signed in
+                  </label>
+
+                  <a href="#">Forgot Password?</a>
+                </div>
+
+                <button
+                  class="ud-inline-flex ud-items-center ud-gap-2.5 ud-bg-black dark:ud-bg-btndark hover:ud-bg-blackho ud-ease-in-out ud-duration-300 ud-font-medium ud-text-white ud-rounded-full ud-px-6 ud-py-3"
+                >
+                  Create Account
+                  <svg class="ud-fill-white" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z" fill="" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="ud-text-center ud-border-t ud-border-stroke dark:ud-border-strokedark ud-mt-12.5 ud-py-5">
+                <p>Don't have an account? <a class="ud-text-black dark:ud-text-white" href="signin.html">Sign Up</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- ===== SignIn Form End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <include src="./partials/footer.html" />
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <include src="./partials/scrolltop.html" />
+    <!-- ====== Back To Top End ===== -->
+  </body>
+</html>

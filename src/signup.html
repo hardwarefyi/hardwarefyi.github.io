@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sing Up | Solid - Tailwind CSS Saas Template</title>
+  </head>
+  <body
+    x-data="{ page: 'signup', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'dark bg-black': darkMode === true}"
+  >
+    <!-- ===== Bg Lines Start ===== -->
+    <include src="./partials/lines.html" />
+    <!-- ===== Bg Lines End ===== -->
+
+    <!-- ===== Header Start ===== -->
+    <include src="./partials/header.html" />
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== SignUp Form Start ===== -->
+      <section class="pt-32.5 lg:pt-45 xl:pt-50 pb-12.5 lg:pb-25 xl:pb-30">
+        <div class="mx-auto max-w-c-1016 relative z-1 pt-10 lg:pt-15 xl:pt-20 pb-7.5 px-7.5 lg:px-15 xl:px-20">
+          <div class="absolute -z-1 rounded-lg left-0 top-0 w-full h-2/3 bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] dark:bg-gradient-to-t dark:from-[#24283E] dark:to-[#252A42]"></div>
+          <div class="absolute -z-1 bottom-17.5 left-0 w-full h-1/3">
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="dark:hidden" />
+            <img src="./images/shape/shape-dotted-dark.svg" alt="Dotted" class="hidden dark:block" />
+          </div>
+
+          <div class="animate_top shadow-solid-8 rounded-lg bg-white dark:bg-black dark:border dark:border-strokedark pt-7.5 xl:pt-15 px-7.5 xl:px-15">
+            <h2 class="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-semibold mb-15">Create an Account</h2>
+
+            <form action="https://formbold.com/s/unique_form_id" method="POST">
+              <div class="flex flex-col lg:flex-row lg:justify-between gap-7.5 lg:gap-14 mb-7.5 lg:mb-12.5">
+                <input
+                  type="text"
+                  placeholder="Full name"
+                  class="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Last name"
+                  class="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
+                />
+              </div>
+
+              <div class="flex flex-col lg:flex-row lg:justify-between gap-7.5 lg:gap-14 mb-7.5 lg:mb-12.5">
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  class="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
+                />
+
+                <input
+                  type="password"
+                  placeholder="Password"
+                  class="w-full lg:w-1/2 bg-transparent border-b border-stroke dark:border-strokedark focus-visible:outline-none focus:border-waterloo dark:focus:border-manatee focus:placeholder:text-black dark:focus:placeholder:text-white pb-3.5"
+                />
+              </div>
+
+              <div class="flex flex-wrap md:justify-between gap-10 xl:gap-15">
+                <div>
+                  <label for="supportCheckbox" class="max-w-[425px] flex cursor-pointer select-none hover:text-primary">
+                    <div class="relative">
+                      <input type="checkbox" id="supportCheckbox" class="sr-only" />
+                      <div class="box mr-4 mt-1 flex h-5 w-5 items-center justify-center rounded border border-stroke dark:border-strokedark">
+                        <span class="opacity-0">
+                          <svg width="11" height="8" viewBox="0 0 11 8" fill="none" class="stroke-current">
+                            <path
+                              d="M10.0915 0.951972L10.0867 0.946075L10.0813 0.940568C9.90076 0.753564 9.61034 0.753146 9.42927 0.939309L4.16201 6.22962L1.58507 3.63469C1.40401 3.44841 1.11351 3.44879 0.932892 3.63584C0.755703 3.81933 0.755703 4.10875 0.932892 4.29224L0.932878 4.29225L0.934851 4.29424L3.58046 6.95832C3.73676 7.11955 3.94983 7.2 4.1473 7.2C4.36196 7.2 4.55963 7.11773 4.71406 6.9584L10.0468 1.60234C10.2436 1.4199 10.2421 1.1339 10.0915 0.951972ZM4.2327 6.30081L4.2317 6.2998C4.23206 6.30015 4.23237 6.30049 4.23269 6.30082L4.2327 6.30081Z"
+                              stroke-width="0.4"
+                            ></path>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    By clicking Checkbox, you agree to use our “Form” terms And consent cookie usage in browser.
+                  </label>
+                </div>
+
+                <button class="inline-flex items-center gap-2.5 bg-black dark:bg-btndark hover:bg-blackho ease-in-out duration-300 font-medium text-white rounded-full px-6 py-3">
+                  Create Account
+                  <svg class="fill-white" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z" fill="" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="text-center border-t border-stroke dark:border-strokedark mt-12.5 py-5">
+                <p>Already have an account? <a class="text-black dark:text-white" href="signin.html">Sign In</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- ===== SignUp Form End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <include src="./partials/footer.html" />
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <include src="./partials/scrolltop.html" />
+    <!-- ====== Back To Top End ===== -->
+  </body>
+</html>

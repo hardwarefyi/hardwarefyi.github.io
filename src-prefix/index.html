@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solid - Tailwind CSS Saas Template</title>
+  </head>
+  <body
+    x-data="{ page: 'home', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'ud-dark ud-bg-black': darkMode === true}"
+  >
+    <!-- ===== Bg Lines Start ===== -->
+    <include src="./partials/lines.html" />
+    <!-- ===== Bg Lines End ===== -->
+
+    <!-- ===== Header Start ===== -->
+    <include src="./partials/header.html" />
+    <!-- ===== Header End ===== -->
+
+    <main>
+      <!-- ===== Hero Start ===== -->
+      <section class="ud-pt-35 md:ud-pt-40 xl:ud-pt-46 ud-pb-20 xl:ud-pb-25 ud-overflow-hidden">
+        <div class="ud-mx-auto ud-max-w-c-1390 ud-px-4 md:ud-px-8 2xl:ud-px-0">
+          <div class="ud-flex lg:ud-items-center lg:ud-gap-8 xl:ud-gap-32.5">
+            <div class="animate_left md:ud-w-1/2">
+              <h4 class="ud-text-black dark:ud-text-white ud-text-lg ud-font-medium ud-mb-4.5">🔥 Solid is one of the best option for you.</h4>
+              <h1 class="ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-hero ud-font-bold ud-mb-5">
+                Complete Tailwind CSS
+                <span
+                  class="ud-inline-block ud-relative before:ud-absolute before:ud-bottom-2.5 before:ud-left-0 before:ud-w-full before:ud-h-3 before:ud-bg-titlebg dark:before:ud-bg-titlebgdark before:-ud-z-1"
+                  >Template</span
+                >
+                for SaaS Website
+              </h1>
+              <p>Solid is a complete Tailwind CSS template crafted specially for SaaS, Software Mobile App and Web App Sites.</p>
+
+              <div class="ud-mt-10">
+                <form action="https://formbold.com/s/unique_form_id" method="POST">
+                  <div class="ud-flex ud-flex-wrap ud-gap-5">
+                    <input
+                      type="text"
+                      placeholder="Enter your email address"
+                      class="dark:ud-bg-black ud-border ud-border-stroke dark:ud-border-strokedark ud-shadow-solid-2 dark:ud-shadow-none ud-rounded-full focus:ud-outline-none focus:ud-border-primary dark:focus:ud-border-primary ud-py-2.5 ud-px-6"
+                    />
+                    <button class="ud-flex ud-bg-black hover:ud-bg-blackho dark:ud-bg-btndark ud-text-white ud-rounded-full ud-ease-in-out ud-duration-300 ud-px-7.5 ud-py-2.5">Get Started</button>
+                  </div>
+                </form>
+
+                <p class="ud-text-black dark:ud-text-white ud-mt-5">Try for free no credit card required.</p>
+              </div>
+            </div>
+            <div class="animate_right md:ud-w-1/2 ud-hidden lg:ud-block">
+              <div class="ud-relative 2xl:-ud-mr-7.5">
+                <img src="./images/shape/shape-01.png" alt="shape" class="ud-absolute -ud-left-11.5 ud-top-0" />
+                <img src="./images/shape/shape-02.svg" alt="shape" class="ud-absolute ud-right-0 ud-bottom-0" />
+                <img src="./images/shape/shape-03.svg" alt="shape" class="ud-absolute -ud-right-6.5 ud-bottom-0" />
+                <div>
+                  <img class="dark:ud-hidden ud-shadow-solid-l" src="./images/hero/hero-light.svg" alt="Hero" />
+                  <img class="ud-hidden dark:ud-block ud-shadow-solid-l" src="./images/hero/hero-dark.svg" alt="Hero" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Hero End ===== -->
+
+      <!-- ===== Clients Start ===== -->
+      <section class="ud-bg-alabaster dark:ud-bg-black ud-border ud-border-x-0 ud-border-y-stroke dark:ud-border-y-strokedark ud-py-11">
+        <div class="ud-mx-auto ud-max-w-c-1390 ud-px-4 md:ud-px-8 2xl:ud-px-0">
+          <div class="ud-grid ud-grid-cols-3 md:ud-grid-cols-6 ud-gap-7.5 lg:ud-gap-12.5 xl:ud-gap-29 ud-justify-center ud-items-center">
+            <a href="#" class="animate_top ud-block">
+              <img class="ud-opacity-65 ud-transition-all ud-duration-300 hover:ud-opacity-100 dark:ud-hidden" src="./images/brand/brand-light-01.svg" alt="Clients" />
+              <img class="ud-hidden ud-opacity-50 ud-transition-all ud-duration-300 hover:ud-opacity-100 dark:ud-block" src="./images/brand/brand-dark-01.svg" alt="Clients" />
+            </a>
+            <a href="#" class="animate_top ud-block">
+              <img class="ud-opacity-65 ud-transition-all ud-duration-300 hover:ud-opacity-100 dark:ud-hidden" src="./images/brand/brand-light-02.svg" alt="Clients" />
+              <img class="ud-hidden ud-opacity-50 ud-transition-all ud-duration-300 hover:ud-opacity-100 dark:ud-block" src="./images/brand/brand-dark-02.svg" alt="Clients" />
+            </a>
+            <a href="#" class="ud-block animate_top">
+              <img class="ud-opacity-65 ud-transition-all ud-duration-300 hover:ud-opacity-100 dark:ud-hidden" src="./images/brand/brand-light-03.svg" alt="Clients" />
+              <img class="ud-hidden ud-opacity-50 ud-transition-all ud-duration-300 hover:ud-opacity-100 dark:ud-block" src="./images/brand/brand-dark-03.svg" alt="Clients" />
+            </a>
+            <a href="#" class="ud-block animate_top">
+              <img class="ud-opacity-65 ud-transition-all ud-duration-300 hover:ud-opacity-100 dark:ud-hidden" src="./images/brand/brand-light-04.svg" alt="Clients" />
+              <img class="ud-hidden ud-opacity-50 ud-transition-all ud-duration-300 hover:ud-opacity-100 dark:ud-block" src="./images/brand/brand-dark-04.svg" alt="Clients" />
+            </a>
+            <a href="#" class="ud-block animate_top">
+              <img class="ud-opacity-65 ud-transition-all ud-duration-300 hover:ud-opacity-100 dark:ud-hidden" src="./images/brand/brand-light-05.svg" alt="Clients" />
+              <img class="ud-hidden ud-opacity-50 ud-transition-all ud-duration-300 hover:ud-opacity-100 dark:ud-block" src="./images/brand/brand-dark-05.svg" alt="Clients" />
+            </a>
+            <a href="#" class="ud-block animate_top">
+              <img class="ud-opacity-65 ud-transition-all ud-duration-300 hover:ud-opacity-100 dark:ud-hidden" src="./images/brand/brand-light-06.svg" alt="Clients" />
+              <img class="ud-hidden ud-opacity-50 ud-transition-all ud-duration-300 hover:ud-opacity-100 dark:ud-block" src="./images/brand/brand-dark-06.svg" alt="Clients" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Clients End ===== -->
+
+      <!-- ===== Features Start ===== -->
+      <section id="features" class="ud-py-20 lg:ud-py-25 xl:ud-py-30">
+        <div class="ud-mx-auto ud-max-w-c-1315 ud-px-4 md:ud-px-8 xl:ud-px-0">
+          <!-- Section Title Start -->
+          <div
+            class="animate_top ud-text-center ud-mx-auto"
+            x-data="{ sectionTitle: `SAAS FEATURES`, sectionSubtitle: `Our Software's Core Features`, sectionTitlePara: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          >
+            <include src="./partials/section-title.html" />
+          </div>
+          <!-- Section Title End -->
+
+          <div class="ud-grid ud-grid-cols-1 md:ud-grid-cols-2 lg:ud-grid-cols-3 ud-gap-7.5 xl:ud-gap-12.5 ud-mt-12.5 lg:ud-mt-15 xl:ud-mt-20">
+            <!-- Features item Start -->
+            <div
+              class="animate_top ud-border ud-border-white ud-shadow-solid-3 ud-rounded-lg ud-p-7.5 xl:ud-p-12.5 ud-transition-all hover:ud-shadow-solid-4 dark:hover:ud-bg-hoverdark dark:ud-border-strokedark dark:ud-bg-blacksection"
+            >
+              <div class="ud-flex ud-items-center ud-justify-center ud-rounded-[4px] ud-bg-primary ud-w-16 ud-h-16">
+                <img src="./images/icon/icon-01.svg" alt="Icon" />
+              </div>
+              <h3 class="ud-font-semibold ud-text-xl xl:ud-text-itemtitle ud-text-black dark:ud-text-white ud-mt-7.5 ud-mb-5">Crafted for SaaS</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <!-- Features item End -->
+
+            <!-- Features item Start -->
+            <div
+              class="animate_top ud-border ud-border-white ud-shadow-solid-3 ud-rounded-lg ud-p-7.5 xl:ud-p-12.5 ud-transition-all hover:ud-shadow-solid-4 dark:hover:ud-bg-hoverdark dark:ud-border-strokedark dark:ud-bg-blacksection"
+            >
+              <div class="ud-flex ud-items-center ud-justify-center ud-rounded-[4px] ud-bg-primary ud-w-16 ud-h-16">
+                <img src="./images/icon/icon-02.svg" alt="Icon" />
+              </div>
+              <h3 class="ud-font-semibold ud-text-xl xl:ud-text-itemtitle ud-text-black dark:ud-text-white ud-mt-7.5 ud-mb-5">High-quality Design</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <!-- Features item End -->
+
+            <!-- Features item Start -->
+            <div
+              class="animate_top ud-border ud-border-white ud-shadow-solid-3 ud-rounded-lg ud-p-7.5 xl:ud-p-12.5 ud-transition-all hover:ud-shadow-solid-4 dark:hover:ud-bg-hoverdark dark:ud-border-strokedark dark:ud-bg-blacksection"
+            >
+              <div class="ud-flex ud-items-center ud-justify-center ud-rounded-[4px] ud-bg-primary ud-w-16 ud-h-16">
+                <img src="./images/icon/icon-03.svg" alt="Icon" />
+              </div>
+              <h3 class="ud-font-semibold ud-text-xl xl:ud-text-itemtitle ud-text-black dark:ud-text-white ud-mt-7.5 ud-mb-5">All Essential Sections</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <!-- Features item End -->
+
+            <!-- Features item Start -->
+            <div
+              class="animate_top ud-border ud-border-white ud-shadow-solid-3 ud-rounded-lg ud-p-7.5 xl:ud-p-12.5 ud-transition-all hover:ud-shadow-solid-4 dark:hover:ud-bg-hoverdark dark:ud-border-strokedark dark:ud-bg-blacksection"
+            >
+              <div class="ud-flex ud-items-center ud-justify-center ud-rounded-[4px] ud-bg-primary ud-w-16 ud-h-16">
+                <img src="./images/icon/icon-04.svg" alt="Icon" />
+              </div>
+              <h3 class="ud-font-semibold ud-text-xl xl:ud-text-itemtitle ud-text-black dark:ud-text-white ud-mt-7.5 ud-mb-5">Speed Optimized</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <!-- Features item End -->
+
+            <!-- Features item Start -->
+            <div
+              class="animate_top ud-border ud-border-white ud-shadow-solid-3 ud-rounded-lg ud-p-7.5 xl:ud-p-12.5 ud-transition-all hover:ud-shadow-solid-4 dark:hover:ud-bg-hoverdark dark:ud-border-strokedark dark:ud-bg-blacksection"
+            >
+              <div class="ud-flex ud-items-center ud-justify-center ud-rounded-[4px] ud-bg-primary ud-w-16 ud-h-16">
+                <img src="./images/icon/icon-05.svg" alt="Icon" />
+              </div>
+              <h3 class="ud-font-semibold ud-text-xl xl:ud-text-itemtitle ud-text-black dark:ud-text-white ud-mt-7.5 ud-mb-5">Fully Customizable</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <!-- Features item End -->
+
+            <!-- Features item Start -->
+            <div
+              class="animate_top ud-border ud-border-white ud-shadow-solid-3 ud-rounded-lg ud-p-7.5 xl:ud-p-12.5 ud-transition-all hover:ud-shadow-solid-4 dark:hover:ud-bg-hoverdark dark:ud-border-strokedark dark:ud-bg-blacksection"
+            >
+              <div class="ud-flex ud-items-center ud-justify-center ud-rounded-[4px] ud-bg-primary ud-w-16 ud-h-16">
+                <img src="./images/icon/icon-06.svg" alt="Icon" />
+              </div>
+              <h3 class="ud-font-semibold ud-text-xl xl:ud-text-itemtitle ud-text-black dark:ud-text-white ud-mt-7.5 ud-mb-5">Regular Updates</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+            </div>
+            <!-- Features item End -->
+          </div>
+        </div>
+      </section>
+      <!-- ===== Features End ===== -->
+
+      <!-- ===== About Start ===== -->
+      <section class="ud-pb-20 lg:ud-pb-25 xl:ud-pb-30 ud-overflow-hidden">
+        <div class="ud-mx-auto ud-max-w-c-1235 ud-px-4 md:ud-px-8 xl:ud-px-0">
+          <div class="ud-flex ud-items-center ud-gap-8 lg:ud-gap-32.5">
+            <div class="animate_left ud-hidden md:ud-block md:ud-w-1/2">
+              <img src="./images/about/about-light-01.svg" alt="About" class="dark:ud-hidden" />
+              <img src="./images/about/about-dark-01.svg" alt="About" class="ud-hidden dark:ud-block" />
+            </div>
+            <div class="animate_right md:ud-w-1/2">
+              <h4 class="ud-text-black dark:ud-text-white ud-font-medium ud-uppercase">
+                <a href="#" class="ud-bg-meta ud-text-white ud-text-metatitle ud-inline-flex ud-rounded-full ud-py-1 ud-px-4.5 ud-mr-4 ud-mb-4">New</a> start tracking visitors
+              </h4>
+              <h2 class="ud-relative ud-font-bold ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-hero ud-mb-6">
+                Know More About Our
+                <span
+                  class="ud-inline-block ud-relative before:ud-absolute before:ud-bottom-2.5 before:ud-left-0 before:ud-w-full before:ud-h-3 before:ud-bg-titlebg dark:before:ud-bg-titlebgdark before:-ud-z-1"
+                  >Product.</span
+                >
+              </h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+
+              <div class="ud-mt-7.5 ud-flex ud-items-center ud-gap-5">
+                <div class="ud-w-15 ud-h-15 ud-rounded-[50%] ud-border ud-border-stroke dark:ud-border-strokedark dark:ud-bg-blacksection ud-flex ud-items-center ud-justify-center">
+                  <p class="ud-text-black dark:ud-text-white ud-font-semibold ud-text-metatitle2">01</p>
+                </div>
+                <div class="ud-w-3/4">
+                  <h5 class="ud-text-black dark:ud-text-white ud-text-metatitle2 ud-mb-0.5">Lorem ipsum dolor.</h5>
+                  <p>Ut ultricies lacus non fermentum ultrices.</p>
+                </div>
+              </div>
+              <div class="ud-mt-7.5 ud-flex ud-items-center ud-gap-5">
+                <div class="ud-w-15 ud-h-15 ud-rounded-[50%] ud-border ud-border-stroke dark:ud-border-strokedark dark:ud-bg-blacksection ud-flex ud-items-center ud-justify-center">
+                  <p class="ud-text-black dark:ud-text-white ud-font-semibold ud-text-metatitle2">02</p>
+                </div>
+                <div class="ud-w-3/4">
+                  <h5 class="ud-text-black dark:ud-text-white ud-text-metatitle2 ud-mb-0.5">Fusce consectetur le.</h5>
+                  <p>consectetur adipiscing elit fermentum ultricies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== About End ===== -->
+
+      <!-- ===== About Two Start ===== -->
+      <section>
+        <div class="ud-mx-auto ud-max-w-c-1235 ud-px-4 md:ud-px-8 2xl:ud-px-0 ud-overflow-hidden">
+          <div class="ud-flex ud-items-center ud-gap-8 lg:ud-gap-32.5">
+            <div class="animate_left md:ud-w-1/2">
+              <h4 class="ud-text-black dark:ud-text-white ud-font-medium ud-uppercase">grow your business faster</h4>
+              <h2 class="ud-relative ud-font-bold ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-hero ud-mb-6">
+                Track Your Audience
+                <span
+                  class="ud-inline-block ud-relative before:ud-absolute before:ud-bottom-2.5 before:ud-left-0 before:ud-w-full before:ud-h-3 before:ud-bg-titlebg2 dark:before:ud-bg-titlebgdark before:-ud-z-1"
+                  >Activities</span
+                >
+              </h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+
+              <a href="#" class="ud-flex ud-items-center ud-gap-2.5 ud-text-black dark:ud-text-white ud-mt-7.5">
+                Know More
+                <img class="dark:ud-hidden" src="./images/icon/icon-arrow-light.svg" alt="Arrow" />
+                <img class="ud-hidden dark:ud-block" src="./images/icon/icon-arrow-dark.svg" alt="Arrow" />
+              </a>
+            </div>
+            <div class="animate_right ud-hidden md:ud-block md:ud-w-1/2">
+              <img src="./images/about/about-light-02.svg" alt="About" class="dark:ud-hidden" />
+              <img src="./images/about/about-dark-02.svg" alt="About" class="ud-hidden dark:ud-block" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== About Two End ===== -->
+
+      <!-- ===== Features Tab Start ===== -->
+      <section class="ud-pt-18.5 ud-pb-20 lg:ud-pb-22.5 ud-relative" x-data="{ featuresTab: 'tabOne' }">
+        <div class="ud-mx-auto ud-max-w-c-1390 ud-px-4 md:ud-px-8 2xl:ud-px-0">
+          <div class="ud-absolute ud-top-0 -ud-z-1">
+            <img class="dark:ud-hidden" src="./images/shape/shape-dotted-light.svg" alt="Dotted Shape" />
+            <img class="ud-hidden dark:ud-block" src="./images/shape/shape-dotted-dark.svg" alt="Dotted Shape" />
+          </div>
+
+          <!-- Tab Menues Start -->
+          <div
+            class="animate_top ud-border ud-border-stroke dark:ud-border-strokedark dark:ud-bg-blacksection ud-shadow-solid-5 dark:ud-shadow-solid-6 ud-bg-white ud-rounded-[10px] ud-flex ud-flex-wrap md:ud-flex-nowrap md:ud-items-center ud-justify-center lg:ud-gap-7.5 xl:ud-gap-12.5 ud-mb-15 xl:ud-mb-21.5"
+          >
+            <div
+              class="ud-relative ud-cursor-pointer ud-w-full md:ud-w-auto ud-border-b last:ud-border-0 md:ud-border-0 ud-border-stroke dark:ud-border-strokedark ud-flex ud-items-center ud-gap-4 ud-py-2 xl:ud-py-5 ud-px-6 xl:ud-px-13.5"
+              :class="{ 'active before:ud-w-full before:ud-h-1 before:ud-bg-primary before:ud-absolute before:ud-bottom-0 before:ud-left-0 before:ud-rounded-tl-[4px] before:ud-rounded-tr-[4px]': featuresTab === 'tabOne' }"
+              @click.prevent="featuresTab = 'tabOne'"
+            >
+              <div class="ud-w-12.5 ud-h-12.5 ud-rounded-[50%] ud-border ud-border-stroke dark:ud-border-strokedark dark:ud-bg-blacksection ud-flex ud-items-center ud-justify-center">
+                <p class="ud-text-black dark:ud-text-white ud-font-medium ud-text-metatitle3">01</p>
+              </div>
+              <div class="lg:ud-w-auto md:ud-w-3/5">
+                <h5 class="ud-text-black dark:ud-text-white ud-text-sm xl:ud-text-regular ud-font-medium">Clean User Interface</h5>
+              </div>
+            </div>
+            <div
+              class="ud-relative ud-cursor-pointer ud-w-full md:ud-w-auto ud-border-b last:ud-border-0 md:ud-border-0 ud-border-stroke dark:ud-border-strokedark ud-flex ud-items-center ud-gap-4 ud-py-2 xl:ud-py-5 ud-px-6 xl:ud-px-13.5"
+              :class="{ 'active before:ud-w-full before:ud-h-1 before:ud-bg-primary before:ud-absolute before:ud-bottom-0 before:ud-left-0 before:ud-rounded-tl-[4px] before:ud-rounded-tr-[4px]': featuresTab === 'tabTwo' }"
+              @click.prevent="featuresTab = 'tabTwo'"
+            >
+              <div class="ud-w-12.5 ud-h-12.5 ud-rounded-[50%] ud-border ud-border-stroke dark:ud-border-strokedark dark:ud-bg-blacksection ud-flex ud-items-center ud-justify-center">
+                <p class="ud-text-black dark:ud-text-white ud-font-medium ud-text-metatitle3">02</p>
+              </div>
+              <div class="lg:ud-w-auto md:ud-w-3/5">
+                <h5 class="ud-text-black dark:ud-text-white ud-text-sm xl:ud-text-regular ud-font-medium">Cloud Data Save Options</h5>
+              </div>
+            </div>
+            <div
+              class="ud-relative ud-cursor-pointer ud-w-full md:ud-w-auto ud-border-b last:ud-border-0 md:ud-border-0 ud-border-stroke dark:ud-border-strokedark ud-flex ud-items-center ud-gap-4 ud-py-2 xl:ud-py-5 ud-px-6 xl:ud-px-13.5"
+              :class="{ 'active before:ud-w-full before:ud-h-1 before:ud-bg-primary before:ud-absolute before:ud-bottom-0 before:ud-left-0 before:ud-rounded-tl-[4px] before:ud-rounded-tr-[4px]': featuresTab === 'tabThree' }"
+              @click.prevent="featuresTab = 'tabThree'"
+            >
+              <div class="ud-w-12.5 ud-h-12.5 ud-rounded-[50%] ud-border ud-border-stroke dark:ud-border-strokedark dark:ud-bg-blacksection ud-flex ud-items-center ud-justify-center">
+                <p class="ud-text-black dark:ud-text-white ud-font-medium ud-text-metatitle3">03</p>
+              </div>
+              <div class="lg:ud-w-auto md:ud-w-3/5">
+                <h5 class="ud-text-black dark:ud-text-white ud-text-sm xl:ud-text-regular ud-font-medium">Management And Collaboration</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Tab Menues End -->
+
+          <!-- Tab Content Start -->
+          <div class="animate_top ud-mx-auto ud-max-w-c-1154">
+            <div x-show="featuresTab === 'tabOne'">
+              <div class="ud-flex ud-items-center ud-gap-8 lg:ud-gap-19">
+                <div class="md:ud-w-1/2">
+                  <h2 class="ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-sectiontitle2 ud-font-bold ud-mb-7">Solid Has Neat & Clean User Interface.</h2>
+                  <p class="ud-mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+                  <p class="ud-w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                </div>
+                <div class="ud-hidden md:ud-block md:ud-w-1/2">
+                  <img src="./images/features/features-light-01.svg" alt="Features" class="dark:ud-hidden" />
+                  <img src="./images/features/features-dark-01.svg" alt="Features" class="ud-hidden dark:ud-block" />
+                </div>
+              </div>
+            </div>
+
+            <div x-show="featuresTab === 'tabTwo'">
+              <div class="ud-flex ud-items-center ud-gap-8 lg:ud-gap-19">
+                <div class="md:ud-w-1/2">
+                  <h2 class="ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-sectiontitle2 ud-font-bold ud-mb-7">Solid Has Cloud Data Save Options.</h2>
+                  <p class="ud-mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+                  <p class="ud-w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                </div>
+                <div class="ud-hidden md:ud-block md:ud-w-1/2">
+                  <img src="./images/features/features-light-01.svg" alt="Features" class="dark:ud-hidden" />
+                  <img src="./images/features/features-dark-01.svg" alt="Features" class="ud-hidden dark:ud-block" />
+                </div>
+              </div>
+            </div>
+
+            <div x-show="featuresTab === 'tabThree'">
+              <div class="ud-flex ud-items-center ud-gap-8 lg:ud-gap-19">
+                <div class="md:ud-w-1/2">
+                  <h2 class="ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-sectiontitle2 ud-font-bold ud-mb-7">Solid Has Management And Collaboration.</h2>
+                  <p class="ud-mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+                  <p class="ud-w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                </div>
+                <div class="ud-hidden md:ud-block md:ud-w-1/2">
+                  <img src="./images/features/features-light-01.svg" alt="Features" class="dark:ud-hidden" />
+                  <img src="./images/features/features-dark-01.svg" alt="Features" class="ud-hidden dark:ud-block" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tab Content End -->
+        </div>
+      </section>
+      <!-- ===== Features Tab End ===== -->
+
+      <!-- ===== Funfact Start ===== -->
+      <section class="ud-py-20 lg:ud-py-22.5 ud-px-4 md:ud-px-8 2xl:ud-px-0">
+        <div
+          class="ud-mx-auto ud-max-w-c-1390 ud-py-22.5 xl:ud-py-27.5 ud-relative ud-z-1 ud-rounded-lg ud-bg-gradient-to-t ud-from-[#F8F9FF] ud-to-[#DEE7FF] dark:ud-bg-gradient-to-t dark:ud-from-transparent dark:ud-to-transparent dark:ud-bg-blacksection dark:ud-stroke-strokedark"
+        >
+          <img src="./images/shape/shape-04.svg" alt="Man" class="ud-absolute -ud-top-25 -ud-left-15 lg:ud-left-0 -ud-z-1" />
+          <img src="./images/shape/shape-05.svg" alt="Doodle" class="ud-absolute ud-bottom-0 ud-right-0 -ud-z-1" />
+          <img src="./images/shape/shape-dotted-light-02.svg" alt="Dotted" class="ud-absolute ud-top-0 ud-left-0 -ud-z-1 dark:ud-hidden" />
+          <img src="./images/shape/shape-dotted-dark-02.svg" alt="Dotted" class="ud-absolute ud-top-0 ud-left-0 -ud-z-1 ud-hidden dark:ud-block" />
+
+          <div class="animate_top ud-mx-auto ud-text-center md:ud-w-4/5 lg:ud-w-2/3 xl:ud-w-1/2 ud-mb-12.5 lg:ud-mb-17.5 ud-px-4 md:ud-px-0">
+            <h2 class="ud-font-bold ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-sectiontitle3 ud-mb-4">Trusted by Global Companies.</h2>
+            <p class="lg:ud-w-11/12 ud-mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+          </div>
+
+          <div class="ud-flex ud-flex-wrap ud-justify-center ud-gap-8 lg:ud-gap-42.5">
+            <div class="animate_top ud-text-center">
+              <h3 class="ud-font-bold ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-sectiontitle3 ud-mb-2.5">500K</h3>
+              <p class="ud-text-lg lg:ud-text-para2">World Wide Clients</p>
+            </div>
+            <div class="animate_top ud-text-center">
+              <h3 class="ud-font-bold ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-sectiontitle3 ud-mb-2.5">1M+</h3>
+              <p class="ud-text-lg lg:ud-text-para2">Downloads</p>
+            </div>
+            <div class="animate_top ud-text-center">
+              <h3 class="ud-font-bold ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-sectiontitle3 ud-mb-2.5">865</h3>
+              <p class="ud-text-lg lg:ud-text-para2">Winning Award</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Funfact End ===== -->
+
+      <!-- ===== Integrations Start ===== -->
+      <section>
+        <div class="ud-mx-auto ud-max-w-c-1390 ud-px-4 md:ud-px-8 2xl:ud-px-0">
+          <!-- Section Title Start -->
+          <div
+            class="animate_top ud-text-center ud-mx-auto"
+            x-data="{ sectionTitle: `INTEGRATIONS`, sectionSubtitle: `Remotely Maintain Your Data, From Anywhere, Anytime.`, sectionTitlePara: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          >
+            <include src="./partials/section-title.html" />
+          </div>
+          <!-- Section Title End -->
+        </div>
+
+        <div class="ud-mx-auto ud-max-w-c-1154 ud-px-4 md:ud-px-8 xl:ud-px-0 ud-relative ud-z-50 ud-mt-15 xl:ud-mt-20">
+          <div class="ud-absolute -ud-top-3/4 -ud-z-1">
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="dark:ud-hidden" />
+            <img src="./images/shape/shape-dotted-dark.svg" alt="Dotted" class="ud-hidden dark:ud-block" />
+          </div>
+          <div class="ud-flex ud-flex-wrap ud-gap-y-10 ud-justify-around">
+            <div class="animate_top ud-w-1/6">
+              <div class="ud-inline-block ud-rounded-[10px] ud-shadow-solid-7 ud-bg-white dark:ud-bg-btndark ud-p-4.5">
+                <img src="./images/brand/brand-07.svg" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top ud-w-1/6"></div>
+
+            <div class="animate_top ud-w-1/6">
+              <div class="ud-inline-block ud-rounded-[10px] ud-shadow-solid-7 ud-bg-white dark:ud-bg-btndark ud-p-4.5">
+                <img src="./images/brand/brand-08.svg" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top ud-w-1/6">
+              <div class="ud-bg-[#FFDB26] ud-rounded-full ud-w-[11px] ud-h-[11px]"></div>
+            </div>
+
+            <div class="animate_top ud-w-1/6">
+              <div class="ud-inline-block ud-rounded-[10px] ud-shadow-solid-7 ud-bg-white dark:ud-bg-btndark ud-p-4.5">
+                <img src="./images/brand/brand-09.svg" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top ud-w-1/6"></div>
+
+            <div class="animate_top ud-w-1/6">
+              <div class="ud-bg-[#62E888] ud-rounded-full ud-w-[15px] ud-h-[15px]"></div>
+            </div>
+
+            <div class="animate_top ud-w-1/6">
+              <div class="ud-inline-block ud-rounded-[10px] ud-shadow-solid-7 ud-bg-white dark:ud-bg-btndark ud-p-4.5">
+                <img src="./images/brand/brand-10.svg" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top ud-w-1/6">
+              <div class="ud-bg-[#EF5C00] ud-rounded-full ud-w-[23px] ud-h-[23px]"></div>
+            </div>
+
+            <div class="animate_top ud-w-1/6">
+              <div class="ud-inline-block ud-rounded-[10px] ud-shadow-solid-7 ud-bg-white dark:ud-bg-btndark ud-p-4.5">
+                <img src="./images/brand/brand-11.svg" alt="Brand" />
+              </div>
+            </div>
+
+            <div class="animate_top ud-w-1/6">
+              <div class="ud-bg-[#016BFF] ud-rounded-full ud-w-[15px] ud-h-[15px]"></div>
+            </div>
+
+            <div class="animate_top ud-w-1/6">
+              <div class="ud-inline-block ud-rounded-[10px] ud-shadow-solid-7 ud-bg-white dark:ud-bg-btndark ud-p-4.5">
+                <img src="./images/brand/brand-12.svg" alt="Brand" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Integrations End ===== -->
+
+      <!-- ===== CTA Start ===== -->
+      <section class="ud-py-20 lg:ud-py-25 xl:ud-py-30 ud-px-4 md:ud-px-8 2xl:ud-px-0 ud-overflow-hidden">
+        <div
+          class="ud-mx-auto ud-max-w-c-1390 ud-px-7.5 md:ud-px-12.5 xl:ud-px-17.5 ud-py-12.5 xl:ud-py-0 ud-rounded-lg ud-bg-gradient-to-t ud-from-[#F8F9FF] ud-to-[#DEE7FF] dark:ud-bg-gradient-to-t dark:ud-from-transparent dark:ud-to-transparent dark:ud-bg-blacksection dark:ud-stroke-strokedark"
+        >
+          <div class="ud-flex ud-flex-wrap md:ud-flex-nowrap md:ud-items-center md:ud-justify-between ud-gap-8 md:ud-gap-0">
+            <div class="animate_left md:ud-w-[70%] lg:ud-w-1/2">
+              <h2 class="ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-sectiontitle4 ud-font-bold ud-mb-4 ud-w-11/12">Join With Us Today & Incrud-ease Your Productivity</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+            </div>
+            <div class="animate_right lg:ud-w-[45%]">
+              <div class="ud-flex ud-items-center ud-justify-end xl:ud-justify-between">
+                <img src="./images/shape/shape-06.svg" alt="Saly" class="ud-hidden xl:ud-block" />
+                <a href="signup.html" class="ud-inline-flex ud-items-center ud-gap-2.5 ud-font-medium ud-text-white dark:ud-text-black ud-bg-black dark:ud-bg-white ud-rounded-full ud-py-3 ud-px-6">
+                  Sign up free
+                  <img src="./images/icon/icon-arrow-dark.svg" alt="Arrow" class="dark:ud-hidden" />
+                  <img src="./images/icon/icon-arrow-light.svg" alt="Arrow" class="ud-hidden dark:ud-block" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== CTA End ===== -->
+
+      <!-- ===== FAQ Start ===== -->
+      <section class="ud-pb-20 lg:ud-pb-25 xl:ud-pb-30 ud-overflow-hidden">
+        <div class="ud-mx-auto ud-max-w-c-1235 ud-px-4 md:ud-px-8 xl:ud-px-0 ud-relative">
+          <div class="ud-absolute -ud-bottom-7.5 -ud-z-1">
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="dark:ud-hidden" />
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="ud-hidden dark:ud-block" />
+          </div>
+          <div class="ud-flex ud-flex-wrap md:ud-flex-nowrap md:ud-items-center ud-gap-8 xl:ud-gap-32.5">
+            <div class="animate_left md:ud-w-2/5 lg:ud-w-1/2">
+              <h4 class="ud-text-black dark:ud-text-white ud-font-medium ud-uppercase">OUR FAQS</h4>
+              <h2 class="ud-relative ud-font-bold ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-hero ud-mb-6">
+                Frequently Asked
+                <span
+                  class="ud-inline-block ud-relative before:ud-absolute before:ud-bottom-2.5 before:ud-left-0 before:ud-w-full before:ud-h-3 before:ud-bg-titlebg2 dark:before:ud-bg-titlebgdark before:-ud-z-1"
+                  >Questions</span
+                >
+              </h2>
+
+              <a href="#" class="ud-flex ud-items-center ud-gap-2.5 ud-text-black dark:ud-text-white ud-mt-25">
+                Know More
+                <img class="dark:ud-hidden" src="./images/icon/icon-arrow-light.svg" alt="Arrow" />
+                <img class="ud-hidden dark:ud-block" src="./images/icon/icon-arrow-dark.svg" alt="Arrow" />
+              </a>
+            </div>
+
+            <div class="animate_right md:ud-w-3/5 lg:ud-w-1/2">
+              <div class="ud-bg-white dark:ud-bg-blacksection dark:ud-border dark:ud-border-strokedark ud-shadow-solid-8 ud-rounded-lg" x-data="{selected:0}">
+                <div class="ud-flex ud-flex-col ud-border-b ud-border-stroke dark:ud-border-strokedark">
+                  <h4
+                    @click="selected !== 0 ? selected = 0 : selected = null"
+                    class="ud-cursor-pointer ud-flex ud-justify-between ud-items-center ud-font-medium ud-text-metatitle3 ud-text-black dark:ud-text-white ud-py-5 lg:ud-py-7.5 ud-px-6 lg:ud-px-9"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur.
+                    <img src="./images/icon/icon-plus-light.svg" alt="plus" class="dark:ud-hidden" :class="selected == 0 ? 'ud-hidden' : 'ud-block'" />
+                    <img src="./images/icon/icon-minus-light.svg" alt="minus" class="dark:ud-hidden" :class="selected == 0 ? 'ud-block' : 'ud-hidden'" />
+                    <img src="./images/icon/icon-plus-dark.svg" alt="plus" class="ud-hidden dark:ud-block" :class="selected == 0 ? 'dark:ud-hidden' : 'dark:ud-block'" />
+                    <img src="./images/icon/icon-minus-dark.svg" alt="minus" class="ud-hidden dark:ud-block" :class="selected == 0 ? 'dark:ud-block' : 'dark:ud-hidden'" />
+                  </h4>
+                  <p x-show="selected == 0" class="ud-py-5 lg:ud-py-7.5 ud-px-6 lg:ud-px-9 ud-border-t ud-border-stroke dark:ud-border-strokedark">
+                    We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.
+                  </p>
+                </div>
+                <div class="ud-flex ud-flex-col ud-border-b ud-border-stroke dark:ud-border-strokedark">
+                  <h4
+                    @click="selected !== 1 ? selected = 1 : selected = null"
+                    class="ud-cursor-pointer ud-flex ud-justify-between ud-items-center ud-font-medium ud-text-metatitle3 ud-text-black dark:ud-text-white ud-py-5 lg:ud-py-7.5 ud-px-6 lg:ud-px-9"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur.
+                    <img src="./images/icon/icon-plus-light.svg" alt="plus" class="dark:ud-hidden" :class="selected == 1 ? 'ud-hidden' : 'ud-block'" />
+                    <img src="./images/icon/icon-minus-light.svg" alt="minus" class="dark:ud-hidden" :class="selected == 1 ? 'ud-block' : 'ud-hidden'" />
+                    <img src="./images/icon/icon-plus-dark.svg" alt="plus" class="ud-hidden dark:ud-block" :class="selected == 1 ? 'dark:ud-hidden' : 'dark:ud-block'" />
+                    <img src="./images/icon/icon-minus-dark.svg" alt="minus" class="ud-hidden dark:ud-block" :class="selected == 1 ? 'dark:ud-block' : 'dark:ud-hidden'" />
+                  </h4>
+                  <p x-show="selected == 1" class="ud-py-5 lg:ud-py-7.5 ud-px-6 lg:ud-px-9 ud-border-t ud-border-stroke dark:ud-border-strokedark">
+                    We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.
+                  </p>
+                </div>
+                <div class="ud-flex ud-flex-col">
+                  <h4
+                    @click="selected !== 2 ? selected = 2 : selected = null"
+                    :class="{'ud-cursor-pointer ud-flex ud-justify-between ud-items-center ud-font-medium ud-text-metatitle3 ud-text-black dark:ud-text-white ud-py-5 lg:ud-py-7.5 ud-px-6 lg:ud-px-9': true, 'ud-rounded-b': selected != 2}"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur.
+                    <img src="./images/icon/icon-plus-light.svg" alt="plus" class="dark:ud-hidden" :class="selected == 2 ? 'ud-hidden' : 'ud-block'" />
+                    <img src="./images/icon/icon-minus-light.svg" alt="minus" class="dark:ud-hidden" :class="selected == 2 ? 'ud-block' : 'ud-hidden'" />
+                    <img src="./images/icon/icon-plus-dark.svg" alt="plus" class="ud-hidden dark:ud-block" :class="selected == 2 ? 'dark:ud-hidden' : 'dark:ud-block'" />
+                    <img src="./images/icon/icon-minus-dark.svg" alt="minus" class="ud-hidden dark:ud-block" :class="selected == 2 ? 'dark:ud-block' : 'dark:ud-hidden'" />
+                  </h4>
+                  <p x-show="selected == 2" :class="{'ud-py-5 lg:ud-py-7.5 ud-px-6 lg:ud-px-9 ud-border-t ud-border-stroke dark:ud-border-strokedark': true, 'ud-rounded-b': selected == 2}">
+                    We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== FAQ End ===== -->
+
+      <!-- ===== Testimonials Start ===== -->
+      <section>
+        <div class="ud-mx-auto ud-max-w-c-1315 ud-px-4 md:ud-px-8 xl:ud-px-0">
+          <!-- Section Title Start -->
+          <div
+            class="animate_top ud-text-center ud-mx-auto"
+            x-data="{ sectionTitle: `TESTIMONIALS`, sectionSubtitle: `Client’s Testimonials`, sectionTitlePara: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          >
+            <include src="./partials/section-title.html" />
+          </div>
+          <!-- Section Title End -->
+        </div>
+
+        <div class="animate_top ud-mx-auto ud-max-w-c-1235 ud-px-4 md:ud-px-8 xl:ud-px-0 ud-mt-15 xl:ud-mt-20">
+          <!-- Slider main container -->
+          <div class="swiper testimonial-01 ud-pb-22.5">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="ud-bg-white ud-rounded-lg ud-shadow-solid-9 dark:ud-shadow-none dark:ud-bg-blacksection dark:ud-border dark:ud-border-strokedark ud-p-9 ud-pt-7.5">
+                  <div class="ud-flex ud-justify-between ud-border-b ud-border-stroke dark:ud-border-strokedark ud-pb-6 ud-mb-7.5">
+                    <div>
+                      <h4 class="ud-text-black dark:ud-text-white ud-text-metatitle3 ud-mb-1.5">Devid Smith</h4>
+                      <p>Founter @democompany</p>
+                    </div>
+                    <img class="" src="./images/user/user-01.svg" alt="User" />
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="ud-bg-white ud-rounded-lg ud-shadow-solid-9 dark:ud-shadow-none dark:ud-bg-blacksection dark:ud-border dark:ud-border-strokedark ud-p-9 ud-pt-7.5">
+                  <div class="ud-flex ud-justify-between ud-border-b ud-border-stroke dark:ud-border-strokedark ud-pb-6 ud-mb-7.5">
+                    <div>
+                      <h4 class="ud-text-black dark:ud-text-white ud-text-metatitle3 ud-mb-1.5">Jhon Abraham</h4>
+                      <p>Founter @democompany</p>
+                    </div>
+                    <img class="" src="./images/user/user-02.svg" alt="User" />
+                  </div>
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit, ligula sit amet cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.</p>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Testimonials End ===== -->
+
+      <!-- ===== Pricing Table Start ===== -->
+      <section class="ud-pt-15 lg:ud-pt-20 xl:ud-pt-25 ud-pb-20 lg:ud-pb-25 xl:ud-pb-30">
+        <div class="ud-mx-auto ud-max-w-c-1315 ud-px-4 md:ud-px-8 xl:ud-px-0">
+          <!-- Section Title Start -->
+          <div
+            class="animate_top ud-text-center ud-mx-auto"
+            x-data="{ sectionTitle: `PRICING PLANS`, sectionSubtitle: `Simple Pricing`, sectionTitlePara: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          >
+            <include src="./partials/section-title.html" />
+          </div>
+          <!-- Section Title End -->
+        </div>
+
+        <div class="ud-mx-auto ud-max-w-[1207px] ud-px-4 md:ud-px-8 xl:ud-px-0 ud-relative ud-mt-15 xl:ud-mt-20">
+          <div class="ud-absolute -ud-bottom-15 -ud-z-1">
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="dark:ud-hidden" />
+          </div>
+          <div class="ud-flex ud-flex-wrap lg:ud-flex-nowrap ud-justify-center ud-gap-7.5 xl:ud-gap-12.5">
+            <!-- Pricing Item -->
+            <div
+              class="animate_top md:ud-w-[45%] lg:ud-w-1/3 ud-group ud-relative ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-solid-10 dark:ud-shadow-none ud-border ud-border-stroke dark:ud-border-strokedark ud-p-7.5 xl:ud-p-12.5"
+            >
+              <h3 class="ud-text-black dark:ud-text-white ud-font-bold ud-text-3xl xl:ud-text-sectiontitle3 ud-mb-7.5">
+                $10 <span class="ud-text-regular ud-text-waterloo dark:ud-text-manatee">/month</span>
+              </h3>
+              <h4 class="ud-text-black dark:ud-text-white ud-font-medium ud-text-para2 ud-mb-2.5">Small Pack</h4>
+              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+
+              <div class="ud-border-t ud-border-stroke dark:ud-border-strokedark ud-mt-9 ud-pt-9 ud-pb-12.5">
+                <ul>
+                  <li class="ud-text-black dark:ud-text-manatee ud-mb-4 last:ud-mb-0">300 GB Storage</li>
+                  <li class="ud-text-black dark:ud-text-manatee ud-mb-4 last:ud-mb-0">Unlimited Photos and Videos</li>
+                  <li class="ud-text-black dark:ud-text-manatee ud-mb-4 last:ud-mb-0 opacity-40">Exclusive Support</li>
+                  <li class="ud-text-black dark:ud-text-manatee ud-mb-4 last:ud-mb-0 ud-opacity-40">Custom Branding Strategy</li>
+                </ul>
+              </div>
+
+              <a href="#" class="ud-inline-flex ud-items-center ud-gap-2.5 ud-text-primary dark:ud-text-white dark:hover:ud-text-primary ud-font-medium ud-transition-all ud-duration-300">
+                Get the Plan
+                <svg
+                  class="ud-fill-primary dark:ud-fill-white dark:hover:ud-fill-primary ud-transition-all ud-duration-300"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M10.4767 6.17348L6.00668 1.70348L7.18501 0.525146L13.6667 7.00681L7.18501 13.4885L6.00668 12.3101L10.4767 7.84015H0.333344V6.17348H10.4767Z" fill="" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Pricing Item -->
+            <div
+              class="animate_top md:ud-w-[45%] lg:ud-w-1/3 ud-group ud-relative ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-solid-10 dark:ud-shadow-none ud-border ud-border-stroke dark:ud-border-strokedark ud-p-7.5 xl:ud-p-12.5"
+            >
+              <div
+                class="ud-absolute ud-top-7.5 -ud-right-3.5 -ud-rotate-90 ud-rounded-tl-full ud-rounded-bl-full ud-bg-primary ud-font-medium ud-text-white ud-text-metatitle ud-uppercase ud-py-1.5 ud-px-4.5"
+              >
+                popular
+              </div>
+
+              <h3 class="ud-text-black dark:ud-text-white ud-font-bold ud-text-3xl xl:ud-text-sectiontitle3 ud-mb-7.5">
+                $59 <span class="ud-text-regular ud-text-waterloo dark:ud-text-manatee">/month</span>
+              </h3>
+              <h4 class="ud-text-black dark:ud-text-white ud-font-medium ud-text-para2 ud-mb-2.5">Medium Pack</h4>
+              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+
+              <div class="ud-border-t ud-border-stroke dark:ud-border-strokedark ud-mt-9 ud-pt-9 ud-pb-12.5">
+                <ul>
+                  <li class="ud-text-black dark:ud-text-manatee ud-mb-4 last:ud-mb-0">300 GB Storage</li>
+                  <li class="ud-text-black dark:ud-text-manatee ud-mb-4 last:ud-mb-0">Unlimited Photos and Videos</li>
+                  <li class="ud-text-black dark:ud-text-manatee ud-mb-4 last:ud-mb-0">Exclusive Support</li>
+                  <li class="ud-text-black dark:ud-text-manatee ud-mb-4 last:ud-mb-0 ud-opacity-40">Custom Branding Strategy</li>
+                </ul>
+              </div>
+
+              <a href="#" class="ud-inline-flex ud-items-center ud-gap-2.5 ud-text-primary dark:ud-text-white dark:hover:ud-text-primary ud-font-medium ud-transition-all ud-duration-300">
+                Get the Plan
+                <svg
+                  class="ud-fill-primary dark:ud-fill-white dark:hover:ud-fill-primary ud-transition-all ud-duration-300"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M10.4767 6.17348L6.00668 1.70348L7.18501 0.525146L13.6667 7.00681L7.18501 13.4885L6.00668 12.3101L10.4767 7.84015H0.333344V6.17348H10.4767Z" fill="" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Pricing Item -->
+            <div
+              class="animate_top md:ud-w-[45%] lg:ud-w-1/3 ud-group ud-relative ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-solid-10 dark:ud-shadow-none ud-border ud-border-stroke dark:ud-border-strokedark ud-p-7.5 xl:ud-p-12.5"
+            >
+              <h3 class="ud-text-black dark:ud-text-white ud-font-bold ud-text-3xl xl:ud-text-sectiontitle3 ud-mb-7.5">
+                $189 <span class="ud-text-regular ud-text-waterloo dark:ud-text-manatee">/month</span>
+              </h3>
+              <h4 class="ud-text-black dark:ud-text-white ud-font-medium ud-text-para2 ud-mb-2.5">Large Pack</h4>
+              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+
+              <div class="ud-border-t ud-border-stroke dark:ud-border-strokedark ud-mt-9 ud-pt-9 ud-pb-12.5">
+                <ul>
+                  <li class="ud-text-black dark:ud-text-manatee ud-mb-4 last:ud-mb-0">300 GB Storage</li>
+                  <li class="ud-text-black dark:ud-text-manatee ud-mb-4 last:ud-mb-0">Unlimited Photos and Videos</li>
+                  <li class="ud-text-black dark:ud-text-manatee ud-mb-4 last:ud-mb-0">Exclusive Support</li>
+                  <li class="ud-text-black dark:ud-text-manatee ud-mb-4 last:ud-mb-0">Custom Branding Strategy</li>
+                </ul>
+              </div>
+
+              <a href="#" class="ud-inline-flex ud-items-center ud-gap-2.5 ud-text-primary dark:ud-text-white dark:hover:ud-text-primary ud-font-medium ud-transition-all ud-duration-300">
+                Get the Plan
+                <svg
+                  class="ud-fill-primary dark:ud-fill-white dark:hover:ud-fill-primary ud-transition-all ud-duration-300"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M10.4767 6.17348L6.00668 1.70348L7.18501 0.525146L13.6667 7.00681L7.18501 13.4885L6.00668 12.3101L10.4767 7.84015H0.333344V6.17348H10.4767Z" fill="" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Pricing Table End ===== -->
+
+      <!-- ===== Contact Start ===== -->
+      <section id="support" class="ud-px-4 md:ud-px-8 2xl:ud-px-0">
+        <div class="ud-mx-auto ud-max-w-c-1390 ud-relative ud-pt-10 lg:ud-pt-15 xl:ud-pt-20 ud-px-7.5 lg:ud-px-15 xl:ud-px-20 ud-overflow-hidden">
+          <div
+            class="ud-absolute -ud-z-1 ud-rounded-lg ud-left-0 ud-top-0 ud-w-full ud-h-2/3 ud-bg-gradient-to-t ud-from-[#F8F9FF] ud-to-[#DEE7FF] dark:ud-bg-gradient-to-t dark:ud-from-[#24283E] dark:ud-to-[#252A42]"
+          ></div>
+          <div class="ud-absolute -ud-z-1 ud-bottom-5 ud-left-0 ud-w-full ud-h-1/3">
+            <img src="./images/shape/shape-dotted-light.svg" alt="Dotted" class="dark:ud-hidden" />
+            <img src="./images/shape/shape-dotted-dark.svg" alt="Dotted" class="ud-hidden dark:ud-block" />
+          </div>
+
+          <div class="ud-flex ud-flex-wrap md:ud-flex-nowrap ud-flex-col-reverse md:ud-flex-row ud-gap-8 xl:ud-gap-20 md:ud-justify-between">
+            <div class="animate_top ud-w-full md:ud-w-3/5 lg:ud-w-3/4 ud-shadow-solid-8 ud-rounded-lg ud-bg-white dark:ud-bg-black dark:ud-border dark:ud-border-strokedark ud-p-7.5 xl:ud-p-15">
+              <h2 class="ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-sectiontitle2 ud-font-semibold ud-mb-15">Send a message</h2>
+
+              <form action="https://formbold.com/s/unique_form_id" method="POST">
+                <div class="ud-flex ud-flex-col lg:ud-flex-row lg:ud-justify-between ud-gap-7.5 lg:ud-gap-14 ud-mb-7.5">
+                  <input
+                    type="text"
+                    placeholder="Full name"
+                    class="ud-w-full lg:ud-w-1/2 ud-bg-transparent ud-border-b ud-border-stroke dark:ud-border-strokedark focus-visible:ud-outline-none focus:ud-border-waterloo dark:focus:ud-border-manatee focus:placeholder:ud-text-black dark:focus:placeholder:ud-text-white ud-pb-3.5"
+                  />
+
+                  <input
+                    type="email"
+                    placeholder="Email address"
+                    class="ud-w-full lg:ud-w-1/2 ud-bg-transparent ud-border-b ud-border-stroke dark:ud-border-strokedark focus-visible:ud-outline-none focus:ud-border-waterloo dark:focus:ud-border-manatee focus:placeholder:ud-text-black dark:focus:placeholder:ud-text-white ud-pb-3.5"
+                  />
+                </div>
+
+                <div class="ud-flex ud-flex-col lg:ud-flex-row lg:ud-justify-between ud-gap-7.5 lg:ud-gap-14 ud-mb-12.5">
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    class="ud-w-full lg:ud-w-1/2 ud-bg-transparent ud-border-b ud-border-stroke dark:ud-border-strokedark focus-visible:ud-outline-none focus:ud-border-waterloo dark:focus:ud-border-manatee focus:placeholder:ud-text-black dark:focus:placeholder:ud-text-white ud-pb-3.5"
+                  />
+
+                  <input
+                    type="text"
+                    placeholder="Phone number"
+                    class="ud-w-full lg:ud-w-1/2 ud-bg-transparent ud-border-b ud-border-stroke dark:ud-border-strokedark focus-visible:ud-outline-none focus:ud-border-waterloo dark:focus:ud-border-manatee focus:placeholder:ud-text-black dark:focus:placeholder:ud-text-white ud-pb-3.5"
+                  />
+                </div>
+
+                <div class="ud-flex ud-mb-11.5">
+                  <textarea
+                    placeholder="Message"
+                    rows="4"
+                    class="ud-w-full ud-bg-transparent ud-border-b ud-border-stroke dark:ud-border-strokedark focus-visible:ud-outline-none focus:ud-border-waterloo dark:focus:ud-border-manatee focus:placeholder:ud-text-black dark:focus:placeholder:ud-text-white"
+                  ></textarea>
+                </div>
+
+                <div class="ud-flex ud-flex-wrap xl:ud-justify-between ud-gap-10 xl:ud-gap-15">
+                  <div>
+                    <label for="supportCheckbox" class="ud-max-w-[425px] ud-flex ud-cursor-pointer ud-select-none hover:ud-text-primary">
+                      <div class="ud-relative">
+                        <input type="checkbox" id="supportCheckbox" class="ud-sr-only" />
+                        <div class="box ud-mr-4 ud-mt-1 ud-flex ud-h-5 ud-w-5 ud-items-center ud-justify-center ud-rounded ud-border ud-border-stroke dark:ud-border-strokedark">
+                          <span class="ud-opacity-0">
+                            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" class="ud-stroke-current">
+                              <path
+                                d="M10.0915 0.951972L10.0867 0.946075L10.0813 0.940568C9.90076 0.753564 9.61034 0.753146 9.42927 0.939309L4.16201 6.22962L1.58507 3.63469C1.40401 3.44841 1.11351 3.44879 0.932892 3.63584C0.755703 3.81933 0.755703 4.10875 0.932892 4.29224L0.932878 4.29225L0.934851 4.29424L3.58046 6.95832C3.73676 7.11955 3.94983 7.2 4.1473 7.2C4.36196 7.2 4.55963 7.11773 4.71406 6.9584L10.0468 1.60234C10.2436 1.4199 10.2421 1.1339 10.0915 0.951972ZM4.2327 6.30081L4.2317 6.2998C4.23206 6.30015 4.23237 6.30049 4.23269 6.30082L4.2327 6.30081Z"
+                                stroke-width="0.4"
+                              ></path>
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                      By clicking Checkbox, you agree to use our “Form” terms And consent cookie usage in browser.
+                    </label>
+                  </div>
+
+                  <button
+                    class="ud-inline-flex ud-items-center ud-gap-2.5 ud-bg-black hover:ud-bg-blackho ud-ease-in-out ud-duration-300 dark:ud-bg-btndark ud-font-medium ud-text-white ud-rounded-full ud-px-6 ud-py-3"
+                  >
+                    Send Message
+                    <svg class="ud-fill-white" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z" fill="" />
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div class="animate_top ud-w-full md:ud-w-2/5 lg:ud-w-[26%] md:ud-p-7.5 xl:ud-pt-15">
+              <h2 class="ud-text-black dark:ud-text-white ud-text-3xl xl:ud-text-sectiontitle2 ud-font-semibold ud-mb-12.5">Find us</h2>
+
+              <div class="ud-mb-7 5">
+                <h4 class="ud-font-medium ud-text-black dark:ud-text-white ud-text-metatitle3 ud-mb-4">Our Loaction</h4>
+                <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
+              </div>
+              <div class="ud-mb-7 5">
+                <h4 class="ud-font-medium ud-text-black dark:ud-text-white ud-text-metatitle3 ud-mb-4">Email Address</h4>
+                <p><a href="#">yourmail@domainname.com</a></p>
+              </div>
+              <div>
+                <h4 class="ud-font-medium ud-text-black dark:ud-text-white ud-text-metatitle3 ud-mb-4">Phone Number</h4>
+                <p><a href="#">+009 42334 6343 843</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Contact End ===== -->
+
+      <!-- ===== Blog Start ===== -->
+      <section class="ud-py-20 lg:ud-py-25 xl:ud-py-30">
+        <div class="ud-mx-auto ud-max-w-c-1315 ud-px-4 md:ud-px-8 xl:ud-px-0">
+          <!-- Section Title Start -->
+          <div
+            class="animate_top ud-text-center ud-mx-auto"
+            x-data="{ sectionTitle: `NEWS & BLOGS`, sectionSubtitle: `Latest News & Blogs`, sectionTitlePara: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          >
+            <include src="./partials/section-title.html" />
+          </div>
+          <!-- Section Title End -->
+        </div>
+
+        <div class="ud-mx-auto ud-max-w-c-1280 ud-px-4 md:ud-px-8 xl:ud-px-0 ud-mt-15 xl:ud-mt-20">
+          <div class="ud-grid ud-grid-cols-1 md:ud-grid-cols-2 lg:ud-grid-cols-3 ud-gap-7.5 xl:ud-gap-10">
+            <!-- Blog Item -->
+            <div class="animate_top ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-solid-8 ud-p-4 ud-pb-9">
+              <a href="#" class="ud-block">
+                <img src="./images/blog/blog-01.png" alt="Blog" />
+              </a>
+
+              <div class="ud-px-4">
+                <h4 class="ud-font-medium ud-text-lg xl:ud-text-itemtitle2 ud-text-black hover:ud-text-primary dark:ud-text-white ud-mt-7.5 ud-mb-3.5">
+                  <a href="blog-single.html">Free advertising for your online business</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-solid-8 ud-p-4 ud-pb-9">
+              <a href="#" class="ud-block">
+                <img src="./images/blog/blog-02.png" alt="Blog" />
+              </a>
+
+              <div class="ud-px-4">
+                <h4 class="ud-font-medium ud-text-lg xl:ud-text-itemtitle2 ud-text-black hover:ud-text-primary dark:ud-text-white ud-mt-7.5 ud-mb-3.5">
+                  <a href="bog-single.html">9 simple ways to improve your design skills</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+
+            <!-- Blog Item -->
+            <div class="animate_top ud-bg-white dark:ud-bg-blacksection ud-rounded-lg ud-shadow-solid-8 ud-p-4 ud-pb-9">
+              <a href="#" class="ud-block">
+                <img src="./images/blog/blog-03.png" alt="Blog" />
+              </a>
+
+              <div class="ud-px-4">
+                <h4 class="ud-font-medium ud-text-lg xl:ud-text-itemtitle2 ud-text-black hover:ud-text-primary dark:ud-text-white ud-mt-7.5 ud-mb-3.5">
+                  <a href="blog-single.html">Tips to quickly improve your coding speed.</a>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Blog End ===== -->
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <include src="./partials/footer.html" />
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <include src="./partials/scrolltop.html" />
+    <!-- ====== Back To Top End ===== -->
+  </body>
+</html>
