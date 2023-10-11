@@ -323,6 +323,19 @@
                 <h5 class="xi vl ni ar ui">MechE Interviewing Cheatsheet</h5>
               </div>
             </div>
+
+            <div
+            class="h ud pc lm ff ok zm hf gl pb ae le vg fq pg gq"
+            :class="{ 'active hk gk mk ak ek ck ik jk': featuresTab === 'tabThree' }"
+            @click.prevent="featuresTab = 'tabThree'"
+          >
+            <div class="tc yb xe df hf gl jl pb ae ce">
+              <p class="xi vl ui mi">02</p>
+            </div>
+            <div style= "text-align:center" class="yn mm/5">
+              <h5 class="xi vl ni ar ui">Electrical Engineering Guide</h5>
+            </div>
+          </div>
             <!--
             <div
               class="h ud pc lm ff ok zm hf gl pb ae le vg fq pg gq"
@@ -387,6 +400,25 @@
                 </div>
                 <div class="tb hm km/2">
                   <img src="images/cheatsheet_png.png" alt="Features" class="el" />
+                  <img src="images/features-dark-01.svg" alt="Features" class="tb dl" />
+                </div>
+              </div>
+            </div>
+
+            <div x-show="featuresTab === 'tabThree">
+              <div class="pb ae pe po">
+                <div class="km/2">
+                  <h2 class="xi vl ji br vi ea">Electrical Engineering Guide</h2>
+                  <p class="fa"><b>Discover the indicators companys use when hiring candidates. Learn how to ace EE technical interviews, and industry-knowledge on EE fundamentals. </p>
+
+                  <a href="https://www.hardwareinterviews.fyi/" class="pb ae fe xi vl ha">
+                  Coming Soon! ✨
+                <img class="el" src="images/icon-arrow-light.svg" alt="Arrow" />
+                <img class="tb dl" src="images/icon-arrow-dark.svg" alt="Arrow" />
+                </a>
+                </div>
+                <div class="tb hm km/2">
+                  <img src="images/guide_image.png" alt="Features" class="el" />
                   <img src="images/features-dark-01.svg" alt="Features" class="tb dl" />
                 </div>
               </div>
