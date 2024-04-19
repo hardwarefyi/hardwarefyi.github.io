@@ -127,6 +127,35 @@ strong {
   font-weight: bolder;
 }
 
+.hero_image {
+  background-image: url('images/home_transparent_2.png');
+  background-size: contain; /* Scale the image to fit the content box, might show some background */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the background image within the section */
+  height: 750px;
+}
+
+.hero_center-text {
+  text-align: center;
+  width: 50%; /* This constrains the text container to 50% of its parent's width */
+  margin: 0 auto; /* Centers the container */
+  border: 1px solid transparent; /* Adds a border around the container for visualization */
+  }
+
+  p.hero_center-text {
+    /* Additional styling to target only the <p> tag with 'hero_center-text' class, if needed */
+    margin-top: 20px; /* This increases space above the <p>, pushing it downwards. Adjust as needed. */
+  }
+
+  .gap-padding {
+    display: block; /* Makes the span behave like a block-level element, allowing margin */
+    margin-top: 175px; /* Adjust the value as needed to increase/decrease space */
+  }
+
+.hero_text {
+    margin-top: 300px; /* Offset the text 50px down from the top of the container */
+}
+
 /*
 1. Use the user's configured `mono` font family by default.
 2. Correct the odd `em` font sizing in all browsers.

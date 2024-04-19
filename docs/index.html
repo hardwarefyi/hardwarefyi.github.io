@@ -14,8 +14,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="image" property="og:image" content="linkedin_description.gif">
-    <title>Hardware FYI - Ace the Hardware Interview</title>
-  <link rel="icon" href="favicon_fyi_gear.png"><link href="style.css" rel="stylesheet"></head>
+    <title>Hardware FYI - Community for all things hardware.</title>
+  <link rel="icon" href="substack_256.png"><link href="style.css" rel="stylesheet"></head>
   <body
     x-data="{ page: 'home', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
     x-init="
@@ -128,22 +128,63 @@
           </label>
         </div>
         -->
+              <nav>
+        <ul class="pb go yd eo me to">
+  
+          <!--<li><a href="index.html" class="tk" :class="{ '_i': page === 'home' }">Home</a></li> --> 
+          <!-- <li><a href="index.html#features" class="tk">About</a></li> -->
+          
+          <li class="b h" x-data="{ dropdown: false }">
+            <a
+              href="#"
+              class="tk pb ae de ke zi oi ui tk"
+              @click.prevent="dropdown = !dropdown"
+              :class="{ '_i': page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }"
+            >
+              Products
+
+              <svg :class="{ 'dg': dropdown }" class="fg cl sc kc ud" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+              </svg>
+            </a>
+
+            <!-- Dropdown Start -->
+            
+            <ul class="dropdown" :class="{ 'pb': dropdown }">
+              <li><a href="mechanical-engineering-cheatsheets.html" class="tk" :class="{ '_i': page === 'blog-grid' }">Mechanical Eng. Cheatsheets</a></li>
+              <li><a href="hardware_fyi_pro.html" class="tk" :class="{ '_i': page === 'blog-single' }">Mechanical Eng.  Guide</a></li>
+            </ul>
+          
+            <!-- Dropdown End -->
+
+          </li>
+          <!-- <li><a href="index.html#pricing" class="tk">Pricing</a></li> --> 
+        </ul>
+      </nav>
         <!--<a href="https://www.hardwareinterviews.fyi/" class="zi oi ui tk">Forum</a> -->
-        <a href="https://hardwarefyi.substack.com/" class="zi oi ui tk">Newsletter</a> 
+        <!--<a href="https://hardwarefyi.substack.com/" class="zi oi ui tk">Newsletter</a> -->
         <a href="https://jobs.hardwarefyi.com/" class="zi oi ui tk">Job Board</a> 
         <!-- <a href="https://discord.gg/NvsCMH5JCG" class="zi oi ui tk">Discord</a> 
         <a href="https://hardwarefyi.substack.com/" class="zi oi ui tk">Newsletter</a> -->
-        <a href="mechanical-engineering-cheatsheets.html" class="zi oi ui tk">Cheatsheets</a>
+         <a href="https://www.hardwareinterviews.fyi/" class="zi oi ui tk">Interviewing Forum</a> 
+         <a
+          href="https://hardwarefyi.substack.com/"
+          class="pb ae ce of rk _j xj yi oi te ug wg"
+          >Newsletter</a
+        >
+
+        <!--
         <a
         href="https://www.hardwareinterviews.fyi/"
         class="pb pf pk il yi te _j xj wg ug"
-        >Browse Questions</a
+        >Interiewing Forum</a
         >
         <a
           href="hardware_fyi_pro.html"
           class="pb ae ce of rk _j xj yi oi te ug wg"
           >Read Guide</a
         >
+      -->
       </div>
     </div>
   </div>
@@ -158,13 +199,13 @@
           <div class="pb go io wp">
             <div class="animate_left km/2">
               <h1 class="xi vl ji zq vi fa">
-                Hardware interviewing 
+                Bridging the gap for 
                 <span
                   class="ob h ak bk ck hk fk kk _l before:-ud-z-1"
-                  >simplified.</span
+                  >all things hardware.</span
                 >
               </h1>
-              <p> Level up your hardware skills to land top tech. jobs through our verified guide. Proven frameworks taught by Silicon Valley's top engineering leaders. 
+              <p> Meet the modern standard for hardware education. Our offerings are centered around hardware development, industry insights, and career growth.
               </p>
 
               <div class="la">
@@ -174,11 +215,11 @@
                       placeholder="Enter your email address"
                       class="kl df hf gl hj yl te zk xk em ug pg"
                     /> --> 
-                    <a href="https://www.hardwareinterviews.fyi/" class="pb pf pk il yi te _j xj wg ug">Explore Verified Questions</a>
-                    <a href="hardware_fyi_pro.html" class="pb of pk il yi te _j xj wg ug">Read Guide</a>
+                    <a href="mechanical-engineering-cheatsheets.html" class="pb pf pk il yi te _j xj wg ug">Engineering Cheatsheets</a>
+                    <a href="hardware_fyi_pro.html" class="pb of pk il yi te _j xj wg ug">Interviewing Guide</a> 
                   </div>
                 <br> <br> 
-                <h4 class="xi vl gi ui qa">🔥 Where our users have landed jobs: </h4> 
+                <h4 class="xi vl gi ui qa">🔥 Where our users work: </h4> 
               </div>
             </div>
             <div class="animate_right km/2_book tb sn">
@@ -189,7 +230,8 @@
                 <img src="images/shape-03.svg" alt="shape" class="g -ud-right-6.5 k" />
                 <div>
                 -->
-                  <img class="" src="images/landing_page_asset.png" alt="Hero" />
+                  <img class="" src="images/gears.png" alt="Hero" />
+                  <br> 
                   <!-- <img class="tb dl ij" src="images/hero-dark.svg" alt="Hero" /> --> 
                 </div>
               </div>
@@ -207,7 +249,7 @@
               <img class="aj qj xj vk el" src="images/companies/tesla.png" alt="Clients" />
               <img class="tb bj qj xj vk dl" src="images/companies/tesla.png" alt="Clients" />
             </a>
-            <a href="#" class="animate_top nb">
+            <a href="#" class="nb animate_top">
               <img class="aj qj xj vk el" src="images/companies/spacex.svg" alt="Clients" />
               <img class="tb bj qj xj vk dl" src="images/companies/spacex.svg" alt="Clients" />
             </a>
@@ -232,15 +274,12 @@
       </section>
       <!-- ===== Clients End ===== -->
 
-
-
-      <!-- ===== Features Start ===== -->
-      <section id="features" class="rg-features uo dq">
-        <div class="aa kd sg cn eq">
+      <section id="features" class=" rg-features uo dq"
+              <div class="aa kd sg cn eq">
           <!-- Section Title Start -->
           <div
             class="animate_top ei aa"
-            x-data="{ sectionTitle: `OVERVIEW`, sectionSubtitle: `What is Hardware FYI?`, sectionTitlePara: `We're building the ultimate go-to resource for professionals looking to break into hardware engineering. Browse hundreds of verified questions, interview guides written by FAANG engineers, and much more! 🚀`}"
+            x-data="{sectionSubtitle: `Product Offerings`, sectionTitlePara: ``}"
           >
             <div class="xf jl fl gl ob te gh _g ra">
   <h4 x-text="sectionTitle" class="ui qi xi vl"></h4>
@@ -250,199 +289,8 @@
 
           </div>
       </br>
-      </section> 
-
-
-<!-- ===== About Start ===== -->
-      <section class="mh ep sq re">
-        <div class="aa ld sg cn eq">
-          <div class="pb ae pe lo">
-            <div class="animate_left tb hm km/2">
-              <img src="images/guide-landing-page-2.png" alt="About" class="el" />
-              <img src="images/about-dark-01.svg" alt="About" class="tb dl" />
-            </div>
-            <div class="animate_right km/2">
-              <h4 class="xi vl ui wi">
-                <a class="pf yi ki rb te zg _g va ra">New   ✨</a> Hardware FYI Pro
-              </h4>
-              <h2 class="h vi xi vl ji zq wa">
-                Ace the Mechanical Engineering 
-                <span
-                  class="ob h ak bk ck hk fk kk _l before:-ud-z-1"
-                  >Interview</span
-                >
-              </h2>
-              <p>#1 Best-Seller Guide that's helped our users land their dream job in hardware. Written and verified by Ex-FAANG and unicorn engineers.</p>
-
-              <div class="ha pb ae me">
-                <div class="rc xb xe df hf gl jl pb ae ce">
-                  <p class="xi vl ti li">01</p>
-                </div>
-                <div class="sc/4">
-                  <h5 class="xi vl li xa">Mechanical Engineering Guide</h5>
-                  <p>Covers interview optimization methods, mechanical engineering fundamentals, and much more.
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ===== About End ===== -->
-
-      <!-- ===== Features Tab Start ===== -->
-      <section class="mh fp h" x-data="{ featuresTab: 'tabOne' }">
-        <div class="aa jd sg cn 2xl:ud-px-0">
-          <div class="g i -ud-z-1">
-            <img class="el" src="images/shape-dotted-light.svg" alt="Dotted Shape" />
-            <img class="tb dl" src="images/shape-dotted-dark.svg" alt="Dotted Shape" />
-          </div>
-          <!-- Tab Menues Start -->
-          <div
-            class="animate_top df hf gl jl kj zl mf ye pb _d um vm ce no up za lp"
-          >
-            <div
-              class="h ud pc lm ff ok zm hf gl pb ae le vg fq pg gq"
-              :class="{ 'active hk gk mk ak ek ck ik jk': featuresTab === 'tabOne' }"
-              @click.prevent="featuresTab = 'tabOne'"
-            >
-              <div class="tc yb xe df hf gl jl pb ae ce">
-                <p class="xi vl ui mi">01</p>
-              </div>
-              <div style= "text-align:center" class="yn mm/5">
-                <h5 class="xi vl ni ar ui">Mechanical Engineering Guide</h5>
-              </div>
-            </div>
-            
-            <div
-              class="h ud pc lm ff ok zm hf gl pb ae le vg fq pg gq"
-              :class="{ 'active hk gk mk ak ek ck ik jk': featuresTab === 'tabTwo' }"
-              @click.prevent="featuresTab = 'tabTwo'"
-            >
-              <div class="tc yb xe df hf gl jl pb ae ce">
-                <p class="xi vl ui mi">02</p>
-              </div>
-              <div style= "text-align:center" class="yn mm/5">
-                <h5 class="xi vl ni ar ui">MechE Interviewing Cheatsheet</h5>
-              </div>
-            </div>
-            <!--
-            <div
-              class="h ud pc lm ff ok zm hf gl pb ae le vg fq pg gq"
-              :class="{ 'active hk gk mk ak ek ck ik jk': featuresTab === 'tabThree' }"
-              @click.prevent="featuresTab = 'tabThree'"
-            >
-              <div class="tc yb xe df hf gl jl pb ae ce">
-                <p class="xi vl ui mi">03</p>
-              </div>
-              <div style= "text-align:center" class="yn mm/5">
-                <h5 class="xi vl ni ar ui">Interviewing Cheatsheets</h5>
-              </div>
-            </div>
-          -->
-          </div>
-          
-          <!-- Tab Menues End -->
-
-          <!-- Tab Content Start -->
-          <div class="animate_top aa md">
-            <div x-show="featuresTab === 'tabOne'">
-              <div class="pb ae pe po">
-                <div class="km/2">
-                  <h2 class="xi vl ji br vi ea">Ace the Mechanical Engineer Interview Guide.</h2>
-                  <!-- <p class="fa">Outline:
-                 </p> -->
-                  <p class="vc/12"> 
-                    Designed to take you from zero experience to your dream job in tech. The guide is split in two parts: 
-                  </p>
-                  <br>
-                  <p>
-                    <b>Part One: </b> Craft the perfect resume and create a kick-ass design portfolio. Learn how to write cold emails, find recruiters, and land interviews for any company. 
-                  </p>
-                  <br>
-                  <p> 
-                    <b>Part Two: </b> Discover the indicators companys use when hiring candidates. Learn how to ace mechanical engineering technical interviews, and industry-knowledge on mechanical engineering fundamentals. </p>
-                <a href="https://buy.stripe.com/eVacQM1LR5Xb6A0dQS" class="pb ae fe xi vl ha">
-                Get Now
-                <img class="el" src="images/icon-arrow-light.svg" alt="Arrow" />
-                <img class="tb dl" src="images/icon-arrow-dark.svg" alt="Arrow" />
-                </a>
-                </div>
-                <div class="tb hm km/2">
-                  <img src="images/guide_image.png" alt="Features" class="el" />
-                  <img src="images/features-dark-01.svg" alt="Features" class="tb dl" />
-                </div>
-              </div>
-            </div>
-            
-            <div x-show="featuresTab === 'tabTwo'">
-              <div class="pb ae pe po">
-                <div class="km/2">
-                  <h2 class="xi vl ji br vi ea">Mechanical Engineering Interview Cheatsheet</h2>
-                  <p class="fa"><b>Everything you'll need to know the day of your interview. </b>One-page summary of the most important concepts and formulas you'll need to know for Mechanical Engineering Interviews. </p>
-                  <p class="vc/12">Concepts covered include mechanics of materials, materials, heat transfer, fluid dynamics, manufacturing methods, and free body diagrams. </p>
-
-                  <a href="https://buy.stripe.com/14kdUQ6272KZcYo3ch" class="pb ae fe xi vl ha">
-                  Get Now
-                <img class="el" src="images/icon-arrow-light.svg" alt="Arrow" />
-                <img class="tb dl" src="images/icon-arrow-dark.svg" alt="Arrow" />
-                </a>
-                </div>
-                <div class="tb hm km/2">
-                  <img src="images/cheatsheets_blurred_2.svg" alt="Features" class="el" />
-                  <img src="images/features-dark-01.svg" alt="Features" class="tb dl" />
-                </div>
-              </div>
-            </div>
-            <!--
-            <div x-show="featuresTab === 'tabThree'">
-              <div class="pb ae pe po">
-                <div class="km/2">
-                  <h2 class="xi vl ji br vi ea">Solid Has Management And Collaboration.</h2>
-                  <p class="fa">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
-                  <p class="vc/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
-
-                   <a href="https://www.hardwareinterviews.fyi/" class="pb ae fe xi vl ha">
-                Get Now
-                <img class="el" src="images/icon-arrow-light.svg" alt="Arrow" />
-                <img class="tb dl" src="images/icon-arrow-dark.svg" alt="Arrow" />
-                </a>
-                </div>
-                <div class="tb hm km/2">
-                  <img src="images/features-light-01.svg" alt="Features" class="el" />
-                  <img src="images/features-dark-01.svg" alt="Features" class="tb dl" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Tab Content End -->
-        </div>
-      </section>
-
-
-      <section id="features" class=" rg-features uo dq"
           <!-- Section Title End -->
           <div class="aa kd sg cn eq">
-          <div
-          class="aa jd wg en kq ch lq ue yf zf _f ol pl rl jl ul"
-        >
-          <div class="pb _d um vm wm pe xm">
-            <div class="animate_left om _n/2">
-              <h2 class="xi vl ji dr vi ra vc/12">Hardware FYI Forum - Built by and for students.</h2>
-              <p>The largest hardware technical interviewing database online. Combining verified and crowdsourced solutions to make interview preparation a breeze.</p>
-            </div>
-            <div class="animate_right ao">
-              <div class="pb ae be sp">
-                <img src="images/shape-06.svg" alt="Saly" class="tb np" />
-                <a href="https://www.hardwareinterviews.fyi/" class="rb ae fe ui yi wl lf ll te qg pg">
-                  Explore Forum 
-                  <img src="images/icon-arrow-dark.svg" alt="Arrow" class="el" />
-                  <img src="images/icon-arrow-light.svg" alt="Arrow" class="tb dl" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
           <div class="sb wd rm do he up ta mn kp">
             <!-- Features item Start -->
             <div
@@ -451,8 +299,8 @@
               <div class="pb ae ce ve of qc wb">
                 <img src="images/icon-01.svg" alt="Icon" />
               </div>
-              <h3 class="ti ii _q xi vl ha fa">Built for Students</h3>
-              <p>Hardware FYI is designed to take engineers from zero experience to landing their dream job.</p>
+              <h3 class="ti ii _q xi vl ha fa"> <a href="https://www.hardwareinterviews.fyi/" style="color:#016AFF;"> Technical Interviewing Database  </a></h3>
+              <p>Verified questions and answers for you to practice from top tech. companies. </p>
             </div>
             <!-- Features item End -->
 
@@ -463,10 +311,8 @@
               <div class="pb ae ce ve of qc wb">
                 <img src="images/icon-02.svg" alt="Icon" />
               </div>
-              <h3 class="ti ii _q xi vl ha fa">Questions & Community</h3>
-              <p>Over 200+ verified questions and answers for you to practice from top tech. companies.</p>
-              <br>
-              <a href="https://www.hardwareinterviews.fyi/" style="color:#339af0;"> View Forum > </a>
+              <h3 class="ti ii _q xi vl ha fa"> <a href="https://hardwarefyi.substack.com/" style="color:#016AFF;"> Newsletter </a></h3>
+              <p>Industry insights, hardware development lessons, career trends, and more.</p>
             </div>
             <!-- Features item End -->
 
@@ -477,328 +323,59 @@
               <div class="pb ae ce ve of qc wb">
                 <img src="images/icon-03.svg" alt="Icon" />
               </div>
-              <h3 class="ti ii _q xi vl ha fa">Interview Prepping 101</h3>
-              <p>Finding companies, landing interviews, and getting a job offer is difficult. We've got every path and edge case covered. </p>
+              <h3 class="ti ii _q xi vl ha fa"> <a href="https://jobs.hardwarefyi.com/" style="color:#016AFF;"> Job Board </a></h3>
+              <p>Discover jobs at thousands of companies working on all things hardware.</p>
+            </div>
+            <!-- Features item End -->
+                        <!-- Features item Start -->
+            <div
+              class="animate_top df if jj ue mg aq qj wk bm gl jl"
+            >
+              <div class="pb ae ce ve of qc wb">
+                <img src="images/icon-03.svg" alt="Icon" />
+              </div>
+              <h3 class="ti ii _q xi vl ha fa"> <a href="" style="color:#016AFF;"> Knowledge Center </a></h3>
+              <p>All the best hardware resources in one place - engineering fundamentals, design guides, technical whitepapers, and more. <br> <br>Releasing Summer 2024! ✨ </p>
+            </div>
+            <!-- Features item End -->
+                                    <!-- Features item Start -->
+            <div
+              class="animate_top df if jj ue mg aq qj wk bm gl jl"
+            >
+              <div class="pb ae ce ve of qc wb">
+                <img src="images/icon-05.svg" alt="Icon" />
+              </div>
+              <h3 class="ti ii _q xi vl ha fa">Interviewing Guides</h3>
+              <p>Complete guide to acing interviews with resume advice, insights from top firms, strategies for technical questions, and engineering fundamentals.</p>
                             <br>
-              <a href="hardware_fyi_pro.html" style="color:#339af0;"> Read Guide > </a>
+              <a href="hardware_fyi_pro.html" style="color:#339af0;"> > Mechanical Eng. Guide  </a>
+              <br>
+              <!-- <a href="hardware_fyi_pro.html" style="color:#339af0;"> > Electrical Eng. Guide  </a> --> 
+            </div>
+            <!-- Features item End -->
+                                    <!-- Features item Start -->
+            <div
+              class="animate_top df if jj ue mg aq qj wk bm gl jl"
+            >
+              <div class="pb ae ce ve of qc wb">
+                <img src="images/icon-05.svg" alt="Icon" />
+              </div>
+              <h3 class="ti ii _q xi vl ha fa">Engineering Cheatsheets</h3>
+              <p>Summary sheets of the most important concepts and formulas you'll need to know for engineering interviews.</p>
+                            <br>
+              <a href="mechanical-engineering-cheatsheets.html" style="color:#339af0;"> > Mechanical Eng. Cheatsheets  </a>
+              <br>
+              <!-- <a href="mechanical-engineering-cheatsheets.html" style="color:#339af0;"> > Electrical Eng. Cheatsheets  </a> -->
             </div>
             <!-- Features item End -->
           </div>
         </div>
       </div>
-      </section>
+      <br> 
+      <br> 
+      <br> 
+      <br> 
       <!-- ===== Features End ===== -->
-
-       <!-- ===== CTA Start ===== -->
-       <!--
-      <section class="rg-cta uo dq sg cn 2xl:ud-px-0 re">
-        <div
-          class="aa jd wg en kq ch lq ue yf zf _f ol pl rl jl ul"
-        >
-          <div class="pb _d um vm wm pe xm">
-            <div class="animate_left om _n/2">
-              <h2 class="xi vl ji dr vi ra vc/12">Hardware FYI Forum - Built by and for students.</h2>
-              <p>Forever open-source and community first. The largest hardware technical interviewing database online. We solve questions together to make interview preparation a breeze.</p>
-            </div>
-            <div class="animate_right ao">
-              <div class="pb ae be sp">
-                <img src="images/shape-06.svg" alt="Saly" class="tb np" />
-                <a href="signup.html" class="rb ae fe ui yi wl lf ll te qg pg">
-                  Explore Forum 
-                  <img src="images/icon-arrow-dark.svg" alt="Arrow" class="el" />
-                  <img src="images/icon-arrow-light.svg" alt="Arrow" class="tb dl" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  		-->
-      <!-- ===== CTA End ===== -->
-
-      
-      <!-- ===== Features Tab End ===== -->
-      
-      <!-- ===== About Two Start ===== -->
-      <!--
-      <section>
-        <div class="aa ld sg cn 2xl:ud-px-0 re">
-          <div class="pb ae pe lo">
-            <div class="animate_left km/2">
-              <h4 class="xi vl ui wi">Hardware FYI Base</h4>
-              <h2 class="h vi xi vl ji zq wa">
-                Hardware interview question
-                <span
-                  class="ob h ak bk ck hk fk lk _l before:-ud-z-1"
-                  >database</span
-                >
-              </h2>
-              <p>Forever open-source and community first. The largest hardware technical interviewing database online. We solve questions together to make interview preparation a breeze.</p>
-
-              <a href="https://www.hardwareinterviews.fyi/" class="pb ae fe xi vl ha">
-                View Forum
-                <img class="el" src="images/icon-arrow-light.svg" alt="Arrow" />
-                <img class="tb dl" src="images/icon-arrow-dark.svg" alt="Arrow" />
-              </a>
-            </div>
-            <div class="animate_right tb hm km/2">
-              <img src="images/about-light-02.svg" alt="About" class="el" />
-              <img src="images/about-dark-02.svg" alt="About" class="tb dl" />
-            </div>
-          </div>
-        </div>
-      </section>
-  -->
-      <!-- ===== About Two End ===== -->
-
-      <!-- ===== Pricing Table Start ===== --> 
-      <section id="pricing" class="uh hp vq mh ep sq">
-        <div class="aa kd sg cn eq">
-          <!-- Section Title Start -->
-          <div
-            class="animate_top ei aa"
-            x-data="{ sectionTitle: `PRICING PLANS`, sectionSubtitle: `Simple Pricing`, sectionTitlePara: `Choose the plan that fits best. Hardware FYI offers both free & premium plans to accelerate your career growth.`}"
-          >
-            <div class="xf jl fl gl ob te gh _g ra">
-  <h4 x-text="sectionTitle" class="ui qi xi vl"></h4>
-</div>
-<h2 x-text="sectionSubtitle" class="vi ji cr xi vl nm/5 op/2 aa ra"></h2>
-<p class="aa nm/5 bo/5 qp" x-text="sectionTitlePara"></p>
-
-          </div>
-          <!-- Section Title End -->
-        </div>
-
-        <div class="aa nd sg cn eq h ga kp">
-          <div class="g -ud-bottom-15 -ud-z-1">
-            <img src="images/shape-dotted-light.svg" alt="Dotted" class="el" />
-          </div>
-          <div class="pb _d fo ce he up">
-            <!-- Pricing Item -->
-            <div
-              class="animate_top qm _n/3 b h mf jl ue nj yl df hf gl mg aq"
-            >
-              <h3 class="xi vl vi ji cr da">
-                Free <span class="oi zi xl"></span>
-              </h3>
-              <h4 class="xi vl ui pi bb">Hardware FYI Forum </h4>
-              <p>The largest hardware technical interviewing database online. </p>
-
-              <div class="gf hf gl gb vh wh">
-                <ul>
-                  <li class="xi xl ra nk">Over 200+ verified questions and answers for you to practice from top tech. companies. Questions from companies like Apple, Tesla, SpaceX, and more.</li>
-                </ul>
-              </div>
-
-              <a href="https://www.hardwareinterviews.fyi/" class="rb ae fe _i vl dm ui qj xj">
-                Explore Forum
-                <svg
-                  class="dg tl cm qj xj"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="https://www.w3.org/2000/svg"
-                >
-                  <path d="M10.4767 6.17348L6.00668 1.70348L7.18501 0.525146L13.6667 7.00681L7.18501 13.4885L6.00668 12.3101L10.4767 7.84015H0.333344V6.17348H10.4767Z" fill="" />
-                </svg>
-              </a>
-            </div>
-
-            <!-- Pricing Item -->
-            <div
-              class="animate_top qm _n/3 b h mf jl ue nj yl df hf gl mg aq"
-            >
-              <div
-                class="g m -ud-right-3.5 -ud-rotate-90 bf cf of ui yi ki wi gh _g"
-              >
-                popular
-              </div>
-
-              <h3 class="xi vl vi ji cr da">
-                $25 <span class="oi zi xl"></span>
-              </h3>
-              <h4 class="xi vl ui pi bb">Ace the Mechanical Engineer Interview Guide</h4>
-              <p>Written by Ex-Tesla, Ex-Apple engineers.</p>
-
-              <div class="gf hf gl gb vh wh">
-                <ul>
-                  <li class="xi xl ra nk">Content includes:</li>
-                  <li class="xi xl ra nk">Job Hunting & Interviewing Strategy</li>
-                  <li class="xi xl ra nk">Mechanical Engineering Fundamentals for Interviews</li>
-                  <li class="xi xl ra nk cj">Consumer ME Hardware Guide</li>
-                </ul>
-              </div>
-
-              <a href="https://buy.stripe.com/eVacQM1LR5Xb6A0dQS" class="rb ae fe _i vl dm ui qj xj">
-                Buy Now 
-                <svg
-                  class="dg tl cm qj xj"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="https://www.w3.org/2000/svg"
-                >
-                  <path d="M10.4767 6.17348L6.00668 1.70348L7.18501 0.525146L13.6667 7.00681L7.18501 13.4885L6.00668 12.3101L10.4767 7.84015H0.333344V6.17348H10.4767Z" fill="" />
-                </svg>
-              </a>
-            </div>
-            <!-- Pricing Item -->
-            <div
-              class="animate_top qm _n/3 b h mf jl ue nj yl df hf gl mg aq"
-            >
-              <div
-                class="g m -ud-right-3.5 -ud-rotate-90 bf cf of ui yi ki wi gh _g"
-              >
-                popular
-              </div>
-              <h3 class="xi vl vi ji cr da">
-                $20 <span class="oi zi xl"></span>
-              </h3>
-              <h4 class="xi vl ui pi bb">Hardware Interview Cheatsheets</h4>
-              <p>One-page summary of the most important concepts and formulas.</p>
-
-              <div class="gf hf gl gb vh wh">
-                <ul>
-                  <li class="xi xl ra nk">Cheatsheet covers topics such as statics, materials, manufacturing methods, and free body diagrams.</li>
-                </ul>
-              </div>
-
-              <a href="https://buy.stripe.com/14kdUQ6272KZcYo3ch" class="rb ae fe _i vl dm ui qj xj">
-                Buy Now
-                <svg
-                  class="dg tl cm qj xj"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="https://www.w3.org/2000/svg"
-                >
-                  <path d="M10.4767 6.17348L6.00668 1.70348L7.18501 0.525146L13.6667 7.00681L7.18501 13.4885L6.00668 12.3101L10.4767 7.84015H0.333344V6.17348H10.4767Z" fill="" />
-                </svg>
-              </a>
-            </div>
-            
-            <!--
-            <div
-              class="animate_top qm _n/3 b h mf jl ue nj yl df hf gl mg aq"
-            >
-              <h3 class="xi vl vi ji cr da">
-                $25 <span class="oi zi xl"></span>
-              </h3>
-              <h4 class="xi vl ui pi bb">Ace the Electrical Engineer Interview Guide</h4>
-              <p>Written by an Ex-Apple, Ex-Nuro engineer.</p>
-
-              <div class="gf hf gl gb vh wh">
-                <ul>
-                  <li class="xi xl ra nk">Content includes:</li>
-                  <li class="xi xl ra nk">Job Hunting Strategy & Landing Interviews</li>
-                  <li class="xi xl ra nk">Electrical Engineering Fundamentals for Interviews</li>
-                  <li class="xi xl ra nk cj">Consumer EE Hardware Guide</li>
-                </ul>
-              </div>
-
-              <a class="rb ae fe _i vl dm ui qj xj">
-                Coming Soon! Early Access Spring 2023
-                <svg
-                  class="dg tl cm qj xj"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="https://www.w3.org/2000/svg"
-                >
-                  <path d="M10.4767 6.17348L6.00668 1.70348L7.18501 0.525146L13.6667 7.00681L7.18501 13.4885L6.00668 12.3101L10.4767 7.84015H0.333344V6.17348H10.4767Z" fill="" />
-                </svg>
-              </a>
-            </div>
-            -->
-          </div>
-        </div>
-      </section>
-      <!-- ===== Pricing Table End ===== -->
-      <!-- ===== Testimonials Start ===== -->
-      <section>
-        <div class="aa kd sg cn eq">
-          <!-- Section Title Start -->
-          <div
-            class="animate_top ei aa"
-            x-data="{ sectionTitle: `TESTIMONIALS`, sectionSubtitle: `User Testimonials`, sectionTitlePara: `From real people. Working at real (and awesome) companies.`}"
-          >
-            <div class="xf jl fl gl ob te gh _g ra">
-  <h4 x-text="sectionTitle" class="ui qi xi vl"></h4>
-</div>
-<h2 x-text="sectionSubtitle" class="vi ji cr xi vl nm/5 op/2 aa ra"></h2>
-<p class="aa nm/5 bo/5 qp" x-text="sectionTitlePara"></p>
-
-          </div>
-          <!-- Section Title End -->
-        </div>
-
-        <div class="animate_top aa ld sg cn eq ga kp">
-          <!-- Slider main container -->
-          <div class="swiper testimonial-01 ph">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="mf ue mj yl jl fl gl lg rh">
-                  <div class="pb de ff hf gl th da">
-                    <div>
-                      <h4 class="xi vl mi eb">Yuki O.</h4>
-                      <p>Product Design Engineer @ Apple</p>
-                    </div>
-                    <img class="" src="images/user-01.svg" alt="User" />
-                  </div>
-
-                  <p>“Hardware FYI was an amazing resource that taught me crucial information I wasn’t taught in class. Consumer product design is a niche industry where knowledge of GD&T, tolerance stacks, and high-volume manufacturing process is valuable, and I was able to build a strong understanding of these subjects through studying the questions and detailed solutions on Hardware.FYI. Couldn’t have gotten my job without it!"</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="mf ue mj yl jl fl gl lg rh">
-                  <div class="pb de ff hf gl th da">
-                    <div>
-                      <h4 class="xi vl mi eb">Christopher T.</h4>
-                      <p>Ex-Tesla & Formlabs</p>
-                    </div>
-                    <img class="" src="images/user-02.svg" alt="User" />
-                  </div>
-
-                  <p>Hardware FYI is the Leetcode for mechanical engineers. Until my friend told me about hardware.fyi I didn’t even realize that there were recurring interview questions that companies like Apple and Tesla would ask mechanical engineers/product designers. Any competitive/high paying engineering company is going to grill you on technicals in interviews and this is one of the few resources that helped me prepare for my interviews at Formlabs, Apple and Tesla. I highly recommend checking out this database which is more comprehensive and time efficient than scraping for questions on glassdoor</p>
-                </div>
-              </div>
-                            <div class="swiper-slide">
-                <div class="mf ue mj yl jl fl gl lg rh">
-                  <div class="pb de ff hf gl th da">
-                    <div>
-                      <h4 class="xi vl mi eb">Anne Z.</h4>
-                      <p>Product Design Engineer at Apple</p>
-                    </div>
-                    <img class="" src="images/user-02.svg" alt="User" />
-                  </div>
-                  <p>Hardware FYI was absolutely pivotal in kickstarting my career! It helped me build lots of confidence for technical interviews, especially when I was starting out with my first few jobs searches and didn’t know what to expect. I couldn’t have landed my job at Apple without it. It’s a super rich resource and I look through it every time I prep for an interview now. Highly recommend to anyone out there trying to make an impression!</p>
-                </div>
-              </div>
-                            <div class="swiper-slide">
-                <div class="mf ue mj yl jl fl gl lg rh">
-                  <div class="pb de ff hf gl th da">
-                    <div>
-                      <h4 class="xi vl mi eb">Matthew L.</h4>
-                      <p>Ex. Ecobee</p>
-                    </div>
-                    <img class="" src="images/user-02.svg" alt="User" />
-                  </div>
-                  <p> I highly recommend Hardware FYI to any engineer seeking to hone their interview abilities. Hardware FYI played a significant role in helping me secure dream jobs at prestigious companies – with such an accessible resource at my disposal, moving forward I feel fully confident for any interview challenge that comes my way!</p>
-                </div>
-              </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-      <!-- ===== Testimonials End ===== -->
 
       <!-- ===== FAQ Start ===== -->
       <section class="mh ep sq re">
@@ -817,12 +394,24 @@
                   >Questions</span
                 >
               </h2>
-
+              <!--
               <a href="https://www.hardwareinterviews.fyi/" class="pb ae fe xi vl db">
-                View Forum 
+                Become a contributor ✍️
                 <img class="el" src="images/icon-arrow-light.svg" alt="Arrow" />
                 <img class="tb dl" src="images/icon-arrow-dark.svg" alt="Arrow" />
               </a>
+              <a href="https://www.hardwareinterviews.fyi/" class="pb ae fe xi vl ">
+                Be an ambassador 🤝
+                <img class="el" src="images/icon-arrow-light.svg" alt="Arrow" />
+                <img class="tb dl" src="images/icon-arrow-dark.svg" alt="Arrow" />
+              </a>
+            
+            <a href="https://www.hardwareinterviews.fyi/" class="pb ae fe xi vl db">
+                Suggest a topic 📖
+                <img class="el" src="images/icon-arrow-light.svg" alt="Arrow" />
+                <img class="tb dl" src="images/icon-arrow-dark.svg" alt="Arrow" />
+              </a>
+            -->
             </div>
 
             <div class="animate_right mm/5 _n/2">
@@ -832,14 +421,14 @@
                     @click="selected !== 0 ? selected = 0 : selected = null"
                     class="ud pb de ae ui mi xi vl eh xo pg yo"
                   >
-                    What is Hardware FYI Pro?
+                    Do you offer academic licenses for universities?
                     <img src="images/icon-plus-light.svg" alt="plus" class="el" :class="selected == 0 ? 'tb' : 'nb'" />
                     <img src="images/icon-minus-light.svg" alt="minus" class="el" :class="selected == 0 ? 'nb' : 'tb'" />
                     <img src="images/icon-plus-dark.svg" alt="plus" class="tb dl" :class="selected == 0 ? 'el' : 'dl'" />
                     <img src="images/icon-minus-dark.svg" alt="minus" class="tb dl" :class="selected == 0 ? 'dl' : 'el'" />
                   </h4>
                   <p x-show="selected == 0" class="eh xo pg yo gf hf gl">
-                    Hardware FYI Pro is designed to teach you everything you need to know about job interviewing, and how to land your dream job in hardware. Written for engineers of any level who want to break into tech. at the top companies.
+                    Yes, we do offer academic licenses tailored for universities. If your institution is interested in providing summary sheets to both students and staff, <a href="mailto:info@hardwarefyi.com" style="color: #326BFF;"">email us</a> to learn more!
                   </p>
                 </div>
                 <div class="pb yd ff hf gl">
@@ -847,7 +436,7 @@
                     @click="selected !== 1 ? selected = 1 : selected = null"
                     class="ud pb de ae ui mi xi vl eh xo pg yo"
                   >
-                    Are there resources for electrical engineers? 
+                    Partnerships?
                     <img src="images/icon-plus-light.svg" alt="plus" class="el" :class="selected == 1 ? 'tb' : 'nb'" />
                     <img src="images/icon-minus-light.svg" alt="minus" class="el" :class="selected == 1 ? 'nb' : 'tb'" />
                     <img src="images/icon-plus-dark.svg" alt="plus" class="tb dl" :class="selected == 1 ? 'el' : 'dl'" />
@@ -862,7 +451,7 @@
                     @click="selected !== 2 ? selected = 2 : selected = null"
                     :class="{'ud pb de ae ui mi xi vl eh xo pg yo': true, 'af': selected != 2}"
                   >
-                    Do you offer 1:1 interview prepping & career coaching?
+                    Do you offer 1:1 interview prep & career coaching?
                     <img src="images/icon-plus-light.svg" alt="plus" class="el" :class="selected == 2 ? 'tb' : 'nb'" />
                     <img src="images/icon-minus-light.svg" alt="minus" class="el" :class="selected == 2 ? 'nb' : 'tb'" />
                     <img src="images/icon-plus-dark.svg" alt="plus" class="tb dl" :class="selected == 2 ? 'el' : 'dl'" />
@@ -967,8 +556,10 @@
       <div class="animate_top">
         <ul class="pb ae pe">
           <li><a href="mailto: hardwarefyi@gmail.com" class="tk">Contact</a></li>
+          <li><a href="https://discord.gg/fy8yHVj2" class="tk">Discord</a></li>
         </ul>
       </div>
+
 
       <div class="animate_top">
         <p>&copy; 2023 Hardware FYI. Made with 💛 & 🍵</p>
@@ -1025,6 +616,12 @@
                 </defs>
               </svg>
             </a>
+          </li>
+          <li> 
+                          <a href="https://www.linkedin.com/company/hardware-fyi/">
+                <!-- IMG tag with the path to your image -->
+                <img src="discord_gray.svg" width="30" height="40" alt="Description of Image">
+              </a>
           </li>
           <!--
           <li>
