@@ -456,6 +456,22 @@
                     Coming soon! 👀 We'll connect you directly with engineers at top companies.
                   </p>
                 </div>
+                <!-- New Fulfillment & Delivery FAQ Item -->
+				<div class="pb yd">
+				  <h4
+				    @click="selected !== 3 ? selected = 3 : selected = null"
+				    :class="{'ud pb de ae ui mi xi vl eh xo pg yo': true, 'af': selected != 3}"
+				  >
+				    How are digital products fulfilled and delivered?
+				    <img src="images/icon-plus-light.svg" alt="plus" class="el" :class="selected == 3 ? 'tb' : 'nb'" />
+				    <img src="images/icon-minus-light.svg" alt="minus" class="el" :class="selected == 3 ? 'nb' : 'tb'" />
+				    <img src="images/icon-plus-dark.svg" alt="plus" class="tb dl" :class="selected == 3 ? 'el' : 'dl'" />
+				    <img src="images/icon-minus-dark.svg" alt="minus" class="tb dl" :class="selected == 3 ? 'dl' : 'el'" />
+				  </h4>
+				  <p x-show="selected == 3" :class="{'eh xo pg yo gf hf gl': true, 'af': selected == 3}">
+				    All digital products are delivered via email immediately after purchase. If you did not receive your emailm please check your spam folder or <a href="mailto:info@hardwarefyi.com" style="color: #326BFF;">contact us</a> for assistance. Since digital products are instantly accessible, we’re unable to offer refunds or returns. However, if you experience any issues with your purchase, please reach out—we’re happy to help ensure you get what you need. Orders cannot be canceled once processed.
+				  </p>
+				</div>
               </div>
             </div>
           </div>
